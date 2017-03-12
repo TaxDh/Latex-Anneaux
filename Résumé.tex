@@ -18,21 +18,44 @@
 \newtheorem{mydef}{Définition}
 \newtheorem{thm}{Théorème}
 \newtheorem{prop}{Proposition}
+\newtheorem{cor}{Corollaire}
+\newtheorem{lem}{Lemme}
 
 %debut du texte
 \begin{flushleft}
 \Large
+
+\textit{Note de l'auteur, c'est un résumé des notes de cours de théorie des anneaux, pas tous les théorèmes, définitions, et autres y sont écrites, seules celles que je veux retenir et qui ne sont pas évidentes.}\dbs
+
 \textbf{\underline{Chapitre 1}}\\~\\
 
 \begin{prop} Soit $A$ un anneau. Alors l'ensemble $A^{n \times n}$ des matrices de tailles $n \times n$ sur $A$ est un anneau.\end{prop} 
+
 \begin{prop} \znz est un anneau.
 \end{prop}
+
 \begin{mydef} Un sous-anneau $B$ de l'anneau $A$ est un sous-groupe additif de $A$ tel que:
 \begin{enumerate}
 \item $ \forall a,b \in B, ab \in B $
 \item $ 1 \in B$
 \end{enumerate} 
 \end{mydef}
+
+\begin{cor} 
+L'intersection de tous les sous-anneaux de l'anneau A est l'ensemble $ \{ n \cdot 1 | n \in \mathbb{Z} \} $, avec la notation usuelles des groupes additifs.
+\end{cor}
+
+\begin{mydef}
+Si $A$ est un anneau, on dit qu'un élément $a$ de $A$ est inversible s'il existe $b$ de $A$ tel que $ab=ba=1$. Un tel élément $b$ est alors unique et est appelé inverse de $a$.
+\end{mydef}
+
+\begin{mydef}
+L'ensembles des éléments inversibles d'un anneau $A$ est noté $U(A)$. 
+\end{mydef}
+
+\begin{prop}
+$U(A)$ est un groupe sous la multiplication.
+\end{prop}
 
 \end{flushleft}
 
