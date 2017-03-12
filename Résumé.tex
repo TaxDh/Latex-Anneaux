@@ -1,4 +1,4 @@
-\documentclass[16]{article}
+\documentclass[]{article}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -7,12 +7,32 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{definition}{Definition}[section]
 \usepackage{setspace}
-\usepackage{setspace}
 \onehalfspacing
+\usepackage{amsthm}
 \begin{document}
-\begin{flushleft}
-\textbf{\underline{Chapitre 1}}\\
 
+%nouvelle commande
+
+\newcommand{\znz}{$\mathbb{Z} / n \mathbb{Z}$ }
+\newcommand{\dbs}{\\~\\}
+\newtheorem{mydef}{Définition}
+\newtheorem{thm}{Théorème}
+\newtheorem{prop}{Proposition}
+
+%debut du texte
+\begin{flushleft}
+\Large
+\textbf{\underline{Chapitre 1}}\\~\\
+
+\begin{prop} Soit $A$ un anneau. Alors l'ensemble $A^{n \times n}$ des matrices de tailles $n \times n$ sur $A$ est un anneau.\end{prop} 
+\begin{prop} \znz est un anneau.
+\end{prop}
+\begin{mydef} Un sous-anneau $B$ de l'anneau $A$ est un sous-groupe additif de $A$ tel que:
+\begin{enumerate}
+\item $ \forall a,b \in B, ab \in B $
+\item $ 1 \in B$
+\end{enumerate} 
+\end{mydef}
 
 \end{flushleft}
 
@@ -20,4 +40,5 @@
  
 \end{document}
 
-%Ensuite, on montre par récurrence que $i^n = f(n)
+%\\~\\ pour un double enter
+%\begin{} \end{}

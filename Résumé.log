@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.11)  11 MAR 2017 18:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.11)  11 MAR 2017 20:04
 entering extended mode
 **./Résumé.tex
 (Résumé.tex
@@ -407,11 +407,18 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 ("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-
-LaTeX Warning: Unused global option(s):
-    [16].
-
-(Résumé.aux)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip51
+\thm@postskip=\skip52
+\thm@headsep=\skip53
+\dth@everypar=\toks24
+) (Résumé.aux)
 \openout1 = `Résumé.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -429,11 +436,15 @@ LaTeX Font Info:    ... okay on input line 12.
 LaTeX Info: Redefining \degres on input line 12.
 LaTeX Info: Redefining \dots on input line 12.
 LaTeX Info: Redefining \up on input line 12.
-LaTeX Font Info:    Try loading font information for U+msa on input line 14.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+\c@mydef=\count97
+\c@thm=\count98
+\c@prop=\count99
+LaTeX Font Info:    Try loading font information for U+msa on input line 25.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 14.
+LaTeX Font Info:    Try loading font information for U+msb on input line 25.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -441,20 +452,25 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (Résumé.aux) ) 
 Here is how much of TeX's memory you used:
- 2191 strings out of 493333
- 26266 string characters out of 3139197
- 84857 words of memory out of 3000000
- 5737 multiletter control sequences out of 15000+200000
- 6878 words of font info for 24 fonts, out of 3000000 for 9000
+ 2317 strings out of 493333
+ 27656 string characters out of 3139197
+ 85851 words of memory out of 3000000
+ 5858 multiletter control sequences out of 15000+200000
+ 9232 words of font info for 29 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,4n,30p,177b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\User
 s\rene\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk>
- <C:\Users\rene\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecb
-x1000.pk>
-Output written on Résumé.pdf (1 page, 4993 bytes).
+ <C:\Users\rene\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ect
+i1440.pk> <C:\Users\rene\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\d
+pi600\ecbx1440.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Résumé.pdf (1 page, 55897 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
+ 84 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
