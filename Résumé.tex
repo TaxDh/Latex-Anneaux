@@ -1,5 +1,6 @@
-\documentclass[]{article}
+\documentclass[12pt,a4paper]{article}
 
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
@@ -21,9 +22,9 @@
 \newtheorem{cor}{Corollaire}
 \newtheorem{lem}{Lemme}
 
+
 %debut du texte
 \begin{flushleft}
-\Large
 
 \textit{Note de l'auteur, c'est un résumé des notes de cours de théorie des anneaux, pas tous les théorèmes, définitions, et autres y sont écrites, seules celles que je veux retenir et qui ne sont pas évidentes.}\dbs
 
@@ -56,6 +57,70 @@ L'ensembles des éléments inversibles d'un anneau $A$ est noté $U(A)$.
 \begin{prop}
 $U(A)$ est un groupe sous la multiplication.
 \end{prop}
+
+\begin{mydef}
+Dans un anneau $A$ un diviseur de $0$ est un élément de $a$ de $A$, tel que $a \neq 0$ et :
+\begin{enumerate}
+\item $ab = 0$ ($a$ est un diviseur de $0$ à gauche).
+\item $ba = 0$ ($a$ est un diviseur de $0$ à droite).
+\end{enumerate}
+\end{mydef}
+
+\begin{mydef}
+Un anneau est dit intègre s'il n'a aucun diviseur de $0$.
+\end{mydef}
+
+\begin{prop}
+Si $a,b,c \in A$, un anneau intègre. Alors $ab = 0 \Rightarrow a=0$ ou $b=0$. De plus, si $a \neq 0$ et $ab = ac \Rightarrow b=c$ et $ba = ca \Rightarrow b = c.$
+\end{prop}
+
+\begin{prop}
+Soient $A$,$B$ deux anneaux. L'ensemble $A \times B$ muni de l'addition $$ (a,b) + (a',b') = (a+a',b+b')$$ et de la multiplication $$(a,b) \cdot (a',b') = (aa',bb')$$ est un anneau, avec $0_{A \times B} = (0,0)$ et l'élément neutre $1_{A \times B} = (1,1)$. Il est commutatif si et seulement si $A$ et $B$ le sont aussi. L'anneau $A \times B$ n'est pas intègre.
+\end{prop}
+
+\begin{mydef}
+On appelle $A \times B$ l'aneau produit de $A$ et $B$.
+\end{mydef}
+
+\begin{prop} 
+$U(A \times B) = U(A) \times U(B) $
+\end{prop}
+
+\begin{mydef}
+Un homomorphisme d'anneau $f:A\longrightarrow B$ est une fonction tel que:
+\begin{enumerate}
+\item $f$ est un homomorphisme de groupes additifs.
+\item $\forall a,b \in A$, $f(aa')=f(a)f(a')$.
+\item $f(1_A) = 1_B$.
+\end{enumerate}
+\end{mydef}
+
+\begin{mydef}
+Un idéal dans un anneau $A$ est un sous-ensemble $I$ tel que:
+\begin{enumerate}
+\item $I$ est un sous-groupe additif.
+\item $\forall a \in A$, $\forall x \in I$, $ax, xa \in I$.
+\end{enumerate}
+\end{mydef}
+
+\begin{prop}
+Le noyau d'un homomorphisme est un idéal.
+\end{prop}
+
+\begin{prop}
+Soit $I$ un idéal d'un anneau $A$, tel que $I \neq A$. On construit le groupe additif $A/I$, quotient des groupes additifs $A$ et $I$. Alors $A/I$ est un anneau, tel que l'homomorphisme canonique de groupe $A \longrightarrow A/I$ est aussi un homomorphisme d'anneaux.
+\end{prop}
+
+\begin{mydef}
+On appelle $A/I$ l'anneau quotient de $A$ par l'idéal $I$.
+\end{mydef}
+
+\begin{thm}
+Il est à la fin de la page 7(chapitre 1), il n'est pas copiable à cause d'une figure. À lire.
+\end{thm}
+
+
+%Rendu page 8 chapitre 1
 
 \end{flushleft}
 
