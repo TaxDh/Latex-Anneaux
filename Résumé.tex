@@ -14,7 +14,8 @@
 
 %nouvelle commande
 
-\newcommand{\znz}{$\mathbb{Z} / n \mathbb{Z}$ }
+\newcommand{\znz}{\mathbb{Z} / n \mathbb{Z} }
+\newcommand{\zmz}{\mathbb{Z} / m \mathbb{Z} }
 \newcommand{\dbs}{\\~\\}
 \newtheorem{mydef}{Définition}
 \newtheorem{thm}{Théorème}
@@ -32,7 +33,7 @@
 
 \begin{prop} Soit $A$ un anneau. Alors l'ensemble $A^{n \times n}$ des matrices de tailles $n \times n$ sur $A$ est un anneau.\end{prop} 
 
-\begin{prop} \znz est un anneau.
+\begin{prop} $\znz$ est un anneau.
 \end{prop}
 
 \begin{mydef} Un sous-anneau $B$ de l'anneau $A$ est un sous-groupe additif de $A$ tel que:
@@ -119,9 +120,19 @@ On appelle $A/I$ l'anneau quotient de $A$ par l'idéal $I$.
 Il est à la fin de la page 7(chapitre 1), il n'est pas copiable à cause d'une figure. À lire.
 \end{thm}
 
+\begin{cor}
+Si $f: A\longrightarrow B$ est un isomorphisme d'anneau, on a toujours l'isomorphisme d'anneau $A/ker(f) \simeq f(a)$
+\end{cor}
 
-%Rendu page 8 chapitre 1
-%cette ligne est un simple test pour git
+\begin{prop}
+L'image et l'image réciproque d'un sous-anneau est un sous-anneau. L'image réciproque d'un idéal est un idéal. Si l'homomorphisme est surjectif, alors l'image d'un idéal est un idéal.
+\end{prop}
+
+\begin{prop} 
+$\zmz$ est intègre si et seulement si $m$ est premier.
+\end{prop}
+%Rendu page 9 chapitre 1
+
 
 
 \end{flushleft}
