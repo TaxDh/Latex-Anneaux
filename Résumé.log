@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2015.4.11)  15 MAR 2017 10:43
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2015.4.11)  16 MAR 2017 18:28
 entering extended mode
  %&-line parsing enabled.
 **Résumé.tex
@@ -395,11 +395,12 @@ LaTeX Info: Redefining \up on input line 13.
 \c@prop=\count97
 \c@cor=\count98
 \c@lem=\count99
-LaTeX Font Info:    Try loading font information for U+msa on input line 32.
+\c@rap=\count100
+LaTeX Font Info:    Try loading font information for U+msa on input line 33.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 32.
+LaTeX Font Info:    Try loading font information for U+msb on input line 33.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -407,10 +408,10 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./Résumé.aux) ) 
 Here is how much of TeX's memory you used:
- 2197 strings out of 495061
- 26130 string characters out of 1182621
+ 2203 strings out of 495061
+ 26161 string characters out of 1182621
  85079 words of memory out of 3000000
- 5370 multiletter control sequences out of 15000+50000
+ 5376 multiletter control sequences out of 15000+50000
  10509 words of font info for 35 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  24i,6n,24p,394b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -418,14 +419,19 @@ Here is how much of TeX's memory you used:
 ome/dhmo/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/dhmo/.te
 xmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/dhmo/.texmf-var/font
 s/pk/ljfour/jknappen/ec/ecti1200.600pk></usr/share/texmf-texlive/fonts/type1/pu
-blic/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
-ts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.
-pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
-hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-t
-exlive/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Résumé.pdf (2 pages, 84715 bytes).
+blic/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
+ts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6
+.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/s
+hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-t
+exlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/
+type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
+/cmsy6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+/usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/s
+hare/texmf-texlive/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Résumé.pdf (2 pages, 134019 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
+ 150 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -22,6 +22,7 @@
 \newtheorem{prop}{Proposition}
 \newtheorem{cor}{Corollaire}
 \newtheorem{lem}{Lemme}
+\newtheorem{rap}{Rappel}
 
 
 %debut du texte
@@ -137,9 +138,25 @@ Les éléments inversibles de $\zmz$ sont les $n$ avec $ n \perp m$.
 \end{prop}
 
 \begin{cor}
-
+$U(\zmz )$ est en bijection avec $\{ n | 0 \leqslant n \leqslant m-1, n \perp m  \} $. En particulier $| U(\zmz)| = \varphi (m)$.
 \end{cor}
-%Rendu page 9 chapitre 1
+
+\begin{rap}
+$\varphi (m) = | \{ n | 0 \leqslant n \leqslant m-1 \}$. $\varphi$ est appelé l'indicateur d'Euler, ou fonction d'Euler.
+\end{rap}
+
+\begin{prop}
+Si $m$, $p$ sont premier entre eux, alors $\varphi (m p) = \varphi (m) \varphi (p)$.
+\end{prop}
+
+\begin{cor}
+Si $m = p_1^{m_1} \ldots p_k^{m_k}$, $p_i$ premiers distincts, alors 
+$$ \varphi (m) = \prod_{i = 1}^{k} (p_i^{m_i} - p_i^{m_{i-1}})$$
+$$= m \prod_{i = 1}^{k} (1-\frac{1}{p_i}) $$
+\end{cor}
+
+
+%Rendu page 11 chapitre 1
 
 
 
