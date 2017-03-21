@@ -34,6 +34,10 @@
 
 \textbf{\underline{Chapitre 1}}\\~\\
 
+\begin{mydef}
+Un anneau est dit commutatif si la loi de multiplication est commutative.
+\end{mydef}
+
 \begin{prop} Soit $A$ un anneau. Alors l'ensemble $A^{n \times n}$ des matrices de tailles $n \times n$ sur $A$ est un anneau.\end{prop} 
 
 \begin{prop} $\znz$ est un anneau.
@@ -228,7 +232,7 @@ Les éléments neutres pour l'addition et la multiplication sont les fonctions c
 \end{prop}
 
 
-\textbf{\underline{Chapitre 1}}\\~\\
+\textbf{\underline{Chapitre 2}}\\~\\
 
 \begin{mydef}
 Dans un anneau, on dit que $a$ divise $ b $, noté $ a | b $, s'il existe $ c $ tel que $ ac = b $. Alors $ b $ s'appelle multiple de $ a $ et $ a $ un diviseur de  $b $. Note, aucun rapport avec diviseur de $ 0 $.
@@ -252,9 +256,38 @@ $Aa = Ab \Leftrightarrow a $ et $b$ associés.
 \end{center}
 \end{prop}
 
+\begin{mydef}
+Un élément non nul et non inversible d'un anneau commutatif intègre $A$ est dit irréductible si et seulement si  $\forall b , c \in A$, $a = bc \Rightarrow b $ ou $c$ inversible.
+\end{mydef}
 
+\begin{mydef}
+Deux éléments $a$ et $b$ d'un anneau commutatif intègre $A$ sont dits premiers entre eux si: $\forall x \in A$, $x $ divise $a$ et $x$ divise $b \Rightarrow x$ inversible.
+\end{mydef}
 
-%Rendu chapitre 2 page 2
+\begin{mydef}
+Soient $A$ un anneau intègre et $\sigma : A^* \longrightarrow \mathbb{N}$ une application. L'anneau $A$ est euclidien pour $\sigma$ si :
+\begin{enumerate}
+\item pour tous $a, b \in A^*$ tel que $a$ divise $b$, on a $\sigma(a) \leq \sigma(b)$.
+\item pour tous $a \in A$ et $b \in A^*$, il existe $q$ et $r$ $\in A$ tel que $a = bq + r$ avec $r = 0$ ou $\sigma(r) < \sigma(b)$.
+\end{enumerate}
+L'application $\sigma$ s'appelle parfois un stahme (ou une valuation).
+\end{mydef}
+
+\begin{mydef}
+Un anneau commutatif est dit principal si tout idéal est principal.
+\begin{enumerate}
+\item Un idéal d'un anneau commutatif $A$ est dit principal s'il est de la forme $Aa$, $a \in A$.
+\end{enumerate}
+\end{mydef}
+
+\begin{rem}
+$Aa = $ ensemble des multiples de $A$.
+\end{rem}
+
+\begin{thm}
+Tout anneau euclidien est principal.
+\end{thm}
+%Rendu chapitre 2 page 4
 
 
 
