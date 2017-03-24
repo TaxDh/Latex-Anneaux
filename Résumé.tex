@@ -287,7 +287,62 @@ $Aa = $ ensemble des multiples de $A$.
 \begin{thm}
 Tout anneau euclidien est principal.
 \end{thm}
-%Rendu chapitre 2 page 4
+
+\begin{mydef}
+Soit $A$ un anneau commutatif intègre. Il est dit factoriel si: 
+\begin{enumerate}
+\item Tout élément $a$ de $A$, qui n'est ni nul ni inversible, est un produit d'éléments irréductibles.
+$$ a = p_1 \ldots p_i$$
+\item Si pour un élément de $a$ $p_1 \ldots p_n = q_1 \ldots q_m$, alors $m = n$ et il existe une 	permutation $\sigma$ de l'ensemble $\{ 1, \ldots , n \}$ ainsi que des éléments inversibles $u_1 , \ldots , u_n$ tel que $p_i = u_i q_{\sigma (i)}$ pour tout $i$.
+\end{enumerate}
+\end{mydef}
+
+\begin{mydef}
+Un anneau commutatif $A$ satisfait la condition de chaine ascendante si pour toute suite croissante d'idéaux
+$$I_1 \subseteq I_2 \subseteq I_3 \subseteq \ldots \subseteq I_n \subseteq \ldots$$
+Il existe $r$ tel que $I_s = I_r$, $\forall s \geq r$.
+\end{mydef}
+
+\begin{lem}
+Un anneau principal satisfait à la condition de chaine ascendante.
+\end{lem}
+
+\begin{lem}
+Soit $A$ un anneau principal intègre. Alors $a, b$ sont premiers entre eux $\Leftrightarrow \exists x, y \in A$ tel que $ax + by = 1$.
+\end{lem}
+
+\begin{lem}
+Soit $A$ un anneau commutatif intègre principal. Si $a \bot b$ et si $a$ divise $bc$, alors $a$ divise $c$.
+\end{lem}
+
+\begin{thm}
+Soit $A$ un anneau commutatif intègre. Si $A$ est principal, $A$ est factoriel.
+\end{thm}
+
+\begin{cor}
+$\mathbb{Z}$ et $K [x]$ sont factoriels ($K$ corps commutatif).
+\end{cor}
+
+\begin{thm}
+Si $A$ est un anneau factoriel, alors $A[x]$ est un anneau factoriel.
+\end{thm}
+
+\begin{cor}
+Si $A$ est un anneau factoriel, alors $A[x_1, \ldots , x_n]$ est un anneau factoriel.
+\end{cor}
+
+\begin{lem}
+$A[x_1 , \ldots , x_n] \simeq B[x_n]$ où $B = A[x_1 , \ldots , x_{n-1}]$
+\end{lem}
+
+\begin{rem}
+Le corollaire implique que $\mathbb{Z} [x]$ est factoriel. Les éléments irréductibles de $\mathbb{Z} [x]$ sont les +$p$ ou -$p$, $p$ premier dans $\mathbb{N}$, et les polynômes $P(x) \in \mathbb{Z} [x]$, de degré $\geq 1$, qui sont irréductibles dans $\mathbb{Q} [x]$, et qui sont primitifs. 
+\end{rem}
+
+\begin{rem}
+On dit que $0 \neq P(x) = a_n x^n + \ldots + a_0 \in \mathbb{Z} [x]$ est primitif si $pgcd(a_n , \ldots , a_0) = 1$
+\end{rem}
+%Rendu chapitre 2bis page 0
 
 
 
@@ -299,3 +354,5 @@ Tout anneau euclidien est principal.
 
 %\\~\\ pour un double enter
 %\begin{} \end{}
+%... = 	\ldots
+% plus grand ou égale = \geq
