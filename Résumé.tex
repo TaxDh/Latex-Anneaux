@@ -20,6 +20,7 @@
 \newcommand{\dbs}{\\~\\}
 \newcommand{\zdex}{\mathbb{Z} [x]}
 \newcommand{\zdei}{\mathbb{Z} [i]}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
 \newtheorem{mydef}{Définition}
 \newtheorem{thm}{Théorème}
 \newtheorem{prop}{Proposition}
@@ -356,10 +357,39 @@ $A$ est euclidien.
 \end{thm}
 
 \begin{cor}
-$\zdei$ est principal et fonctionnel.
+$\zdei$ est principal et factoriel.
 \end{cor}
 
-%Rendu chapitre 2bis page 2
+\begin{thm}
+Soit $p$ un nombre premier, $p \neq 2$. Alors les conditions suivantes sont équivalentes:
+\begin{enumerate}
+\item $p \equiv 1 \bmod 4$
+\item $-1$ est un carré dans $\zpz$.
+\item il existe $a, b \in \mathbb{Z}$ tel que $p = a^2 + b^2$.
+\item $p$ n'est pas irréductible dans $\zdei$.
+\end{enumerate}
+\end{thm}
+
+\begin{cor}
+Les éléments irréductibles de $\zdei$ sont:
+\begin{enumerate}
+\item $1+i$
+\item les $p$ premiers dans $\mathbb{N}$ avec $p \equiv 3 \bmod 4$.
+\item les $a + bi$, $a - bi$ tel que $a^2 + b^2 $ est premier dans $\mathbb{N}$ et leurs associés.
+\end{enumerate}
+De plus la décomposition $p = a^2 + b^2$ d'un nombre premier est unique.
+\end{cor}
+
+\begin{cor}
+Soit $n = \prod p^{n_p}$, pour $p$ premiers distincts (voir chap 2 bis page 5). Alors $n$ est somme de deux carré si et seulement si $\forall p \equiv 3 \bmod 4$, on a $n_p$ pair.
+\end{cor}
+
+\underline{Note} : À partir de maintenant on prend $A = \mathbb{Z}$ pour $A[x]$. C'est juste pour se simplifier la vie. Donc on parle ici de $\zdex$.
+
+\begin{mydef}
+Un polynôme $p \in \zdex$ est dit primitif si le pgcd de ses coefficient est $1$. Il est en particulier non nul.
+\end{mydef}
+%Rendu chapitre 2ter
 
 
 
@@ -373,3 +403,5 @@ $\zdei$ est principal et fonctionnel.
 %\begin{} \end{}
 %... = 	\ldots
 % plus grand ou égale = \geq
+% somme produit \prod_{i = 1}^{k} (1-\frac{1}{p_i})
+% congrus \equiv et modulo \bmod
