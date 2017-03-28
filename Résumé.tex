@@ -19,6 +19,8 @@
 \newcommand{\zpz}{\mathbb{Z} / p \mathbb{Z} }
 \newcommand{\dbs}{\\~\\}
 \newcommand{\zdex}{\mathbb{Z} [x]}
+\newcommand{\qdex}{\mathbb{Q} [x]}
+\newcommand{\rdex}{\mathbb{R} [x]}
 \newcommand{\zdei}{\mathbb{Z} [i]}
 \newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
 \newtheorem{mydef}{Définition}
@@ -389,7 +391,56 @@ Soit $n = \prod p^{n_p}$, pour $p$ premiers distincts (voir chap 2 bis page 5). 
 \begin{mydef}
 Un polynôme $p \in \zdex$ est dit primitif si le pgcd de ses coefficient est $1$. Il est en particulier non nul.
 \end{mydef}
-%Rendu chapitre 2ter
+
+\textbf{\underline{Lemme de Gauss}}
+\begin{lem}
+Si $P$ et $Q$ sont primitif, alors $PQ$ aussi.
+\end{lem}
+
+\begin{mydef}
+Le dénominateur commun d'une famille de nombre rationnel $r_1 , \ldots , r_n$ est un $d \in \mathbb{N}^*$ tel que $dr_1, \ldots, dr_n \in \mathbb{Z}$
+\end{mydef}
+
+\begin{mydef}
+Le plus petit commun diviseur, appelé ppcd, est le plus petit d'entre eux.
+\end{mydef}
+
+\begin{rem}
+Vu que l'ensemble des dénominateurs communs des $r_i$ forme un idéal de $\mathbb{Z}$, alors le ppdc des $r_i$ les divise tous.
+\end{rem}
+
+\begin{lem}
+Soient $r_1 , \ldots , r_n$ des rationnels non nuls. Il existe un unique rationnel $c > 0$ tel que $r_1/c , \ldots , r_n/c$ soient des entiers premiers entre eux. On a
+ $$ c = \frac{1}{d} pgcd(dr_1, \ldots , dr_n) $$
+où $d$ est le $ppdc(r_1 , \ldots , r_n)$.
+\end{lem}
+
+\begin{rem}
+$r_1 , \ldots , r_n \in \mathbb{Z} \Leftrightarrow d = 1 \Leftrightarrow c \in \mathbb{N}^*$. Dans ce cas, $pgdc(r_i) = 1 \Leftrightarrow c = 1$. 
+\end{rem}
+
+\begin{mydef}
+Étant donné $P \in \mathbb{Q}[x]$, non nul, on note $c(p)$ l'unique nombre rationnel $> 0$ tel que $P/ c(P)$ soit dans $\zdex$ et soit primitif.
+\end{mydef}
+
+\begin{lem}
+$c(PQ) = c(P)c(Q)$
+\end{lem}
+
+\begin{rem}
+Notons $\overline{P}$ l'unique polynôme primitif tel que $P = c(P) \overline{P}$, où $P \in \mathbb{Q}[x]$ et $P \neq 0$. Nous avons donc $\forall P, Q \in \mathbb{Q}^* [x] $, $\overline{P \cdot Q} = \overline{P} \cdot \overline{Q}$
+\end{rem}
+
+\begin{thm}
+$\zdex$ est factoriel. Ses éléments irréductibles sont les polynômes de la forme
+\begin{enumerate}
+\item $P \in \zdex$ primitif irréductible dans $\qdex$.
+\item $\pm \in \mathbb{Z}$, $p$ nombre premier.
+\end{enumerate}
+\end{thm}
+
+
+%Rendu chapitre 3
 
 
 
@@ -405,3 +456,4 @@ Un polynôme $p \in \zdex$ est dit primitif si le pgcd de ses coefficient est $1
 % plus grand ou égale = \geq
 % somme produit \prod_{i = 1}^{k} (1-\frac{1}{p_i})
 % congrus \equiv et modulo \bmod
+% barre au dessus \overline{•}.
