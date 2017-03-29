@@ -443,6 +443,71 @@ $\zdex$ est factoriel. Ses éléments irréductibles sont les polynômes de la f
 \begin{thm}
 Tout corps fini est commutatif.
 \end{thm}
+
+\textbf{\underline{Chapitre 3}}\\~\\
+
+\begin{prop} 
+La caractéristique d'un corps fini est un nombre premier.
+\end{prop}
+
+\begin{prop}
+Le centre d'un corps est un sous-corps.
+\end{prop}
+
+\begin{cor}
+Un corps fini contient $\zpz$ son centre, où $p$ est sa caractéristique.
+\end{cor}
+
+\begin{prop}
+Soit $K$ un corps et $F$ un sous-corps commutatif. Alors $K$ est un espace vectoriel sur $F$, de manière naturelle.
+\end{prop}
+
+\begin{cor}
+Soit $K$ un corps fini de caractéristique $p$. Il existe alors $n$ tel que $|K| = p^n$.
+\end{cor}
+
+\begin{thm}
+Soit $K$ un corps commutatif et $P(x) \in K[x]$. Il existe un sous-corps $L$ de $K$ tel que
+\begin{enumerate}
+\item $\exists \alpha_1, \ldots , \alpha_n \in L$, $P(x) = \lambda \prod_{i = 1}^{n} (x - \alpha_i)$, $\lambda \in K$.
+\item $L$ est engendré par $K$ et $\alpha_1, \ldots , \alpha_n$. De plus $L$ est unique à isomorphisme près.
+\end{enumerate}
+On appelle $L$ le corps de rupture de $P(x)$.
+\end{thm}
+
+
+\begin{prop} 
+Si $A$ est un anneau commutatif de caractéristique $p$ première, et si $n \in \mathbb{N}$, alors $a \mapsto a^{p^n}$, $A \rightarrow A$, est un endomorphisme d'anneaux.
+\end{prop}
+
+
+\begin{cor}
+Si $K$ est un corps commutatif fini à $p^n$ éléments, alors $F: K \rightarrow K$, $a \mapsto a^p$ est un automorphisme de Frobenius. On a $F^n = id$, ou de manière équivalente, $ a^{p^n} = a$, $\forall a \in K$.
+\end{cor}
+
+\begin{rem}
+Si on prend $K = \zpz$, on trouve que $a^p = a$: c'est le petit théorème de Fermat.
+\end{rem}
+
+\begin{cor}
+Soit $K$ un corps commutatif à $p^n$ éléments. Alors on a l'égalité des polynômes (à coefficients dans $K$) $$ x^{p^n} - x = \prod_{a \in K} (x-a)$$
+(note voir exemple page 5 du chapitre 3).
+\end{cor}
+
+\begin{prop} 
+Soit $K$ un corps commutatif et $G$ un endomorphisme de $K$. Alors $L = \{ a \in K | G(a) = a \}$ est un sous-corps de $K$.
+\end{prop}
+
+
+\begin{thm}
+Pour tout nombre premier $p$, et tout entier $n \geq 1$, il existe un corps à $p^n$ éléments, unique à isomorphisme près. 
+\end{thm}
+%\begin{} \end{}\\
+%\begin{} \end{}\\
+%\begin{} \end{}
+%\begin{} \end{}
+
+
 %Rendu chapitre 3
 
 
@@ -459,4 +524,4 @@ Tout corps fini est commutatif.
 % plus grand ou égale = \geq
 % somme produit \prod_{i = 1}^{k} (1-\frac{1}{p_i})
 % congrus \equiv et modulo \bmod
-% barre au dessus \overline{•}.
+% barre au dessus \overline{ }.
