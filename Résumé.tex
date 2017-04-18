@@ -23,6 +23,10 @@
 \newcommand{\rdex}{\mathbb{R} [x]}
 \newcommand{\zdei}{\mathbb{Z} [i]}
 \newcommand{\Fp}{\mathbb{F}_p}
+\newcommand{\Fq}{\mathbb{F}_q}
+\newcommand{\Fpdex}{\mathbb{F}_p [x]}
+\newcommand{\Fqdex}{\mathbb{F}_q [x]}
+
 \newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
 \newtheorem{mydef}{Définition}
 \newtheorem{thm}{Théorème}
@@ -520,12 +524,21 @@ Un corps $K$ est fini de cardinalité $p^n$ si et seulement s'il existe un polyn
 $A = K[x] / (P(x))$ est un espace vectoriel sur $K$ de dimension $n = $deg$(P)$, avec base $1, x, \ldots , x^{n-1} \bmod P$ (on suppose que $K$ est un corps commutatif). L'anneau $A$ est un corps $\Leftrightarrow P$ est irréductible.
 \end{prop}
 
+\textbf{\underline{Chapitre 4}}\\~\\
 
+\begin{rem}
+Soit $q = p^n$. On sait que $\Fp$ est un sous-corps de $\Fq$. L'automorphisme de Frobenius $F: \Fq \longrightarrow \Fq$ est défini par $F(a) = a^p$. On sait que $F^n = id$ dans $\Fq$; c'est-à-dire $$\forall a \in \Fq , a^{p^n} = a$$ On sait aussi que la dimension de $\Fq$ sur $\Fp$ est $n$. 
+\end{rem}
 
+\begin{thm}
+
+\end{thm}
 
 \begin{thm}
 Soit $P(x) \in \Fp [x]$, polynôme irréductible de degré $n$. Soit $K$ un surcorps de $\Fp$, et $\alpha \in K$ tel que $P(\alpha) = 0$. Alors $P$ a les $n$ racines distinctes $\alpha^{(P^i)}, i = 0, \ldots , n-1$.
 \end{thm}
+
+
 %Rendu chapitre 4 thm 2 done
 
 
