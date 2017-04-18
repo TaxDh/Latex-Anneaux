@@ -23,6 +23,7 @@
 \newcommand{\rdex}{\mathbb{R} [x]}
 \newcommand{\zdei}{\mathbb{Z} [i]}
 \newcommand{\Fp}{\mathbb{F}_p}
+\newcommand{\Fpn}{\mathbb{F}_{p^n}}
 \newcommand{\Fq}{\mathbb{F}_q}
 \newcommand{\Fpdex}{\mathbb{F}_p [x]}
 \newcommand{\Fqdex}{\mathbb{F}_q [x]}
@@ -531,15 +532,36 @@ Soit $q = p^n$. On sait que $\Fp$ est un sous-corps de $\Fq$. L'automorphisme de
 \end{rem}
 
 \begin{thm}
-
+Il y a exactement $n$ automorphisme de $\Fq$. Ce sont les fonctions:\\ $F^0 = id$, $F$, $F^2$,$ \ldots $, $F^{n-1}$.
 \end{thm}
 
 \begin{thm}
 Soit $P(x) \in \Fp [x]$, polynôme irréductible de degré $n$. Soit $K$ un surcorps de $\Fp$, et $\alpha \in K$ tel que $P(\alpha) = 0$. Alors $P$ a les $n$ racines distinctes $\alpha^{(P^i)}, i = 0, \ldots , n-1$.
 \end{thm}
 
+\begin{cor}
+Le groupe des automorphismes de $\Fp$, $q = p^n$, est cyclique, engendré par l'automorphisme de Frobenius $F$.
+\end{cor}
 
-%Rendu chapitre 4 thm 2 done
+\begin{thm}
+$1.$ Soient $K$, $L$ deux corps fini tel que $K$ soit un sous-corps  de $L$. Alors il existe un nombre premier $p$ et des entiers naturels $d$, $e \geq 1$ tels que $K = \mathbb{F}_{p^d}$, $L = \mathbb{F}_{p^e}$ et $d | e$.\\
+$2.$ Réciproquement, si $d | e$, alors $\mathbb{F}_{p^d}$ est un sous-corps de $\mathbb{F}_{p^e}$. On a alors: $\mathbb{F}_{p^d} = \{ a \in \mathbb{F}_{p^e} | F^d (x) = x \}$
+\end{thm}
+
+\begin{mydef}
+Une base normale de $\Fpn$ est une base de $\Fpn$, vu comme espace vectoriel sur $\Fp$, de la forme $(a$, $F(a)$, $\ldots$, $F^{n-1} (a) )$.
+\end{mydef}
+
+\begin{thm}
+$\Fq$ est une base normale.
+\end{thm}
+
+\textit{Lemme d'Artin}
+\begin{thm}
+Soit $K$ un corps commutatif et $\psi_1$, $\ldots$, $\psi_m$ des automorphismes distincts de $K$. Soient $a_1$, $\ldots$, $a_m \in K$, non tous nuls. Il existe alors $a \in K$ tel que $a_1 \psi_1 + \ldots + a_m \psi_m \neq 0$.
+\end{thm}
+
+%Rendu partie du démonstrateur théorie de galois.
 
 
 
