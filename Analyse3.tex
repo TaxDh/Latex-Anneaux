@@ -1,0 +1,380 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{amssymb}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}[section]
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{amsthm}
+\usepackage{amsmath}
+\begin{document}
+
+%nouvelle commande
+
+\newcommand{\znz}{\mathbb{Z} / n \mathbb{Z} }
+\newcommand{\zmz}{\mathbb{Z} / m \mathbb{Z} }
+\newcommand{\zpz}{\mathbb{Z} / p \mathbb{Z} }
+\newcommand{\dbs}{\\~\\}
+\newcommand{\zdex}{\mathbb{Z} [x]}
+\newcommand{\qdex}{\mathbb{Q} [x]}
+\newcommand{\rdex}{\mathbb{R} [x]}
+\newcommand{\zdei}{\mathbb{Z} [i]}
+\newcommand{\Fp}{\mathbb{F}_p}
+\newcommand{\Fpn}{\mathbb{F}_{p^n}}
+\newcommand{\Fq}{\mathbb{F}_q}
+\newcommand{\Fpdex}{\mathbb{F}_p [x]}
+\newcommand{\Fqdex}{\mathbb{F}_q [x]}
+\newcommand{\evn}{espace vectoriel normé }
+\newcommand{\ssi}{\textit{si et seulement si} }
+\newcommand{\edm}{\textit{$(E,d)$} }
+
+
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\newtheorem{mydef}{Définition}
+\newtheorem{thm}{Théorème}
+\newtheorem{prop}{Proposition}
+\newtheorem{cor}{Corollaire}
+\newtheorem{lem}{Lemme}
+\newtheorem{rap}{Rappel}
+\newtheorem{rem}{Remarque}
+\newtheorem{propriete}{Propriétés}
+
+%debut du texte
+\begin{flushleft}
+
+\textit{Note de l'auteur, c'est un résumé des notes de cours d'analyse 3, pas tous les théorèmes, définitions, et autres y sont écrites, seules celles que je veux retenir et qui ne sont pas évidentes.}\dbs
+
+\textbf{(Cours 2)}
+
+\begin{mydef} 
+Soit $(E,d)$ un espace métrique et $A \subset E$.
+\begin{enumerate}
+\item Un point $a \in E$ est dit adhérent à $A$ si tout voisinage de $a$ rencontre $A$.
+\item On note $\bar{A} = $ l'ensemble des points adhérent à $A$.
+\item Un point $x \in A$ est dit intérieur à $A$ s'il existe une boule ouverte centré en $x$ et contenue dans $A$.
+\item On note $\mathring{A} = $ l'ensemble des points intérieurs de $A$.
+\end{enumerate}
+\end{mydef}
+
+\begin{mydef}
+Soit $(E,d)$ un espace métrique et $A \subset E$. $A$ est dense si tout point de $E$ est adhérent à $A$.
+\end{mydef}
+
+\begin{thm} 
+Soit $(E,d)$ un espace métrique et $A \subset E$.
+\begin{enumerate}
+\item $\bar{A}$ est le plus petit fermé contenant $A$.
+\item $\mathring{A}$ est le plus grand ouvert contenu dans $A$.
+\end{enumerate}
+\end{thm}
+
+\textbf{(Cours 3)}
+
+\begin{thm} 
+Soit $(E,d_E)$ et $(F,d_F)$ 2 espaces métriques et $f: E \longrightarrow F$ une application. Alors les 3 propriétés suivantes sont équivalentes:
+\begin{enumerate}
+\item L'application $f$ est continue sur $E$.
+\item Pour tout ouvert $U$ de $F$, $ f^{-1} (U) $ est un ouvert de $E$.
+\item Pour tout fermé $B$ de $F$, $ f^{-1} (B) $ est un fermé de $E$.
+\end{enumerate}
+\end{thm}
+
+
+
+\textbf{(Cours 4)}
+\begin{mydef}
+Soit \edm et $(U_i)_{i \in I}$ une famille d'ouvert de $E$. On dit que la famille $(U_i)_{i \in I}$ est un \underline{recouvrement} ouvert de $E$, si $E = \bigcup\limits_{i \in I} U_i$. On appelle un \underline{sous-recouvrement} une sous-famille $(U_i)_{i \in J}$, avec $J \subset I$ fini et $E = \bigcup\limits_{i \in J} U_i$.
+\end{mydef}
+ 
+\begin{mydef}
+On dit que \edm est un espace métrique \underline{compact} si tout recouvrement ouvert de $E$ contient un sous-recouvrement fini.
+\end{mydef} 
+ 
+\begin{rem}
+\edm compact $\Leftrightarrow$ $\forall (U_i)_{i \in I}$ une famille d'ouvert tel que $E = \bigcup\limits_{i \in I} U_i$, $\exists J \subset I$ fini vérifiant $E = \bigcup\limits_{i \in J}$\\$\Leftrightarrow$ De tout recouvrement ouvert de $E$, on peut extraire un sous-recouvrement fini.
+\end{rem}
+
+\begin{rem}
+On peut définir les espaces métriques compacts en utilisant les fermés.
+\end{rem}
+
+\begin{thm}
+\edm est un compact \ssi toutes familles de fermés non vides, qui est stables par intersection finie, possède une intersection non vide.
+\end{thm}
+
+\begin{mydef}
+Soit \edm un espace métrique et $K \subset E$ une partie non vide de $E$. On dit que $K$ est compact \ssi $(K, d_K)$ est un espace métrique compact, avec $d_K$ est la restriction de la distance $d$ à $K$.
+\end{mydef}
+
+
+\begin{thm}
+Si \edm un espace métrique, $K \subset E$ compact et $F \subset K$ un fermé, alors $F$ est compact.
+\end{thm}
+
+%\bigcup\limits_{i \in I}
+\begin{propriete}
+Soit \edm un espace métrique.
+\begin{enumerate}
+\item Si $K_1$ et $K_2$ sont 2 compacts de $E$, alors $K_1 \bigcup K_2$ est aussi un compact de $E$.
+\item Si $(K_i)_{i \in I}$ est une famille de compacts de $E$ et $\bigcap\limits_{i \in I} K_i \neq \emptyset$, alors $\bigcap\limits_{i \in I} K_i$ est un compact de $E$.
+\end{enumerate}
+\end{propriete}
+
+\begin{thm}
+Soit $(E,d_E)$ et $(F,d_F)$ deux espaces métriques, et $f: E \longrightarrow F$ une application continue. Si $K \subset E$ compact, alors $f(K)$ est un compact de $F$. En particulier, si $E$ est compact et $f$ surjective, alors $F$ est compact.
+\end{thm}
+
+
+\begin{cor}
+Si $f: E \longrightarrow F$ est une application continue bijective et $E$ un espace métrique compact, alors $f$ est un homéomorphisme.
+\end{cor}
+
+\underline{\textbf{Théorème Bolzano-Weirstrass}}
+\begin{thm}
+Soit $E$ un espace métrique. Il y a équivalence entre:
+\begin{enumerate}
+\item L'espace $E$ est compact.
+\item Toute suite de point de $E$ possède un point adhérent.
+\item Toute suite de point de $E$ possède une sous-suite convergente dans $E$.
+\end{enumerate}
+\end{thm}
+
+\begin{rap}
+Soit $(U_i)_{i \in I}$ un recouvrement ouvert de $E$. Le nombre $\rho > 0$ est dit \underline{nombre de Lebesgue} du recouvrement $(U_i)_{i \in I}$ si $\forall x \in E$, $B(x, \rho )$ est contenue dans certain $U_i$.
+\end{rap}
+
+\begin{lem}
+Soit $E$ un espace métrique. Si toute suite de points de $E$ possède une valeur d'adhérence, alors tout recouvrement ouvert de $E$ admet un nombre de Lebesgue
+\end{lem}
+
+\begin{rap}
+Le diamètre: $$\delta (E) := \sup\limits_{x \in E , y \in E} d(x,y)$$
+\end{rap}
+
+\begin{thm}
+Si $E$ est un espace métrique compact, alors il est de diamètre fini.
+\end{thm}
+
+\begin{thm}
+Soit \edm un espace métrique compact et $(x_n)_n$ une suite de point de \edm . Si $(x_n)_n$ possède une seule valeur d'adhérence, alors $(x_n)_n$ est convergente
+\end{thm}
+
+\begin{mydef}
+Soit \edm un espace métrique. On dit que $E$ est précompact si, $\forall \epsilon > 0$, il existe un recouvrement de $E$ par un nombre fini de parties de diamètre inférieur à $\epsilon$.
+\end{mydef}
+
+\begin{rem}
+On peut montrer l'équivalence suivante:
+\begin{enumerate}
+\item $E$ est précompacte.
+\item $\forall \epsilon > 0$, on peut recouvrir $E$ par un nombre fini de boules ouvertes de rayon $\epsilon$.
+\end{enumerate}
+\end{rem}
+
+\begin{thm}
+Tout espace métrique compact est précompact.
+\end{thm}
+
+\begin{rem}
+La réciproque est fausse, on verra plus tard qu'un espace métrique est compacte \ssi il est précompact et complet.
+\end{rem}
+
+\begin{mydef}
+Soit \edm un espace métrique. On dit qu'il est \underline{séparable} \ssi il existe $B \subset E$ une partie de $E$ qui est dénombrable et dense dans $E$. C'est-à-dire $\bar{B} = E$, avec $B \subset E$ dénombrable.
+\end{mydef}
+
+\begin{thm}
+Tout espace métrique compact est séparable
+\end{thm}
+
+
+\begin{thm}
+Si $E$ et $F$ sont des espaces métriques compacts, alors le produit $E \times F$ est compact.
+\end{thm}
+
+\begin{thm}
+Le produit d'une famille d'espaces métriques compacts est compact.
+\end{thm}
+
+
+
+
+
+%---------------------------------------------------------------------------------------------------------
+
+\textbf{(Cours 5)}
+
+(Suite de Cauchy)
+\begin{mydef}
+Soit $(E,d)$ un espace métrique. Une suite $(x_n) \subset E$ est dite de Cauchy si:\\
+$\forall \epsilon > 0$ , $\exists n_0 \in \mathbb{N}$, $\forall n$, $m \geq n_0$ $d(x_n , x_m) \leq \epsilon$.
+\end{mydef}
+
+\begin{rem}
+$(x_n)$ est de cauchy $\Leftrightarrow$ $d(x_n, x_m) \longrightarrow 0$ quand $n,m \longrightarrow \infty$\\$\Leftrightarrow$ $\lim\limits_{n \rightarrow \infty} diam (P_n) = 0$ où $P_n =  \{x_k ; k \geq n\}$.
+\end{rem}
+
+\begin{prop}
+(Premières propriétés des suites de Cauchy). Soit $(E,d)$ un espace métrique.
+\begin{enumerate}
+\item Toute suite convergente est une suite de Cauchy.
+\item Toute suite de Cauchy est bornée.
+\item Toute suite extraite $(y_n)$ d'une suite de Cauchy $(x_n)$ est de Cauchy.
+\item Si $(x_n)$ est une suite de Cauchy admettant une sous-suite convergente, alors $(x_n)$ est convergente.
+\end{enumerate}
+\end{prop}
+
+\begin{cor}
+Une suite de Cauchy est convergente \ssi elle a une valeur d'adhérence.
+\end{cor}
+
+
+
+
+\textbf{(Cours 6)}
+
+
+\begin{thm}
+Soit $(E,d)$ un espace métrique \underline{complet} et $F \subset E$. Alors $(F,d)$ est complet \ssi $F$ est fermé de $E$.
+\end{thm}
+
+
+\textbf{(Cours 8)}
+\begin{cor} Toutes les normes sur un espace vectoriel normé sont équivalentes. Et elles sont topologiquement équivalentes. (Voir théorème 3.1 et corollaire 3.3).
+\end{cor}
+
+\begin{thm}
+Soit $E$ un espace vectoriel normé de dimension finie et $ \{e_1, ..., e_n \}$ une base de $E$. Alors l'application $$T: \mathbb{R}^n \longrightarrow E$$ $$x = (x_1, ..., x_n) \mapsto x_1 e_1 + ... + x_n e_n$$ est une homéomorphisme.
+\end{thm}
+
+\begin{cor} 
+Dans un espace vectoriel normé, tout sous-espace de dimension finie est fermé
+\end{cor}
+
+\begin{thm}
+Si $E$ est un espace vectoriel normé de dimension finie, alors la boule unité fermé $\bar{B} (0,1)$ est compacte.
+\end{thm}
+
+\begin{thm}
+Si $E$ est un \evn de dimension finie, alors $K \subset E$ est compact de $E$ \ssi $K$ est fermé borné.
+\end{thm}
+
+(Théorème de Riez
+\begin{thm}
+Soit $E$ un \evn . Si la boule unité fermée $\bar{B}(0,1)$ est compacte, alors $E$ est de dimension finie.
+\end{thm}
+
+\begin{rq}
+En fait, s'il existe une boule fermée et compacte, alors l'espace $E$ est de dimension finie. Suite de la remarque cours 8 page 3 du pdf.
+\end{rq}
+
+
+\underline{Théorème de Hahn-Banach}
+\begin{thm}
+Soit $E$ un \evn , $F \subset E$ un sous-espace vectoriel de dimension finie et $x \in E$. Alors il existe un point $v \in F$ tel que: $$d(x,F) = \lVert x - v \rVert$$
+\end{thm}
+
+
+\begin{thm}
+Soit $E$ un \evn et $F \subset E$ un sous-espace vectoriel. Alors Si $F$ est de dimension finie, alors $F$ est fermé.
+\end{thm}
+
+\underline{Notation:}
+Si $\bar{x} \in E/F$, alors $\lVert \bar{x} \rVert := inf \lVert y \rVert$, pour $y \in \bar{x}$ (pour y est en dessous du inf..., voir page 5 cours 8)
+
+\begin{thm}
+L'application $\bar{x} \in E/F \mapsto \lVert \bar{x} \rVert = inf \lVert y \rVert$ définit une norme sur $E/F$ pour laquelle l'application ... trop long à écrire, voir thm 4.3
+\end{thm}
+
+\begin{thm}
+Soit $E$ et $F$ 2 \evn et $f: E \longrightarrow F$ une application linéaire de rang fini. ALors $f$ est continue sur $E$ \ssi son noyau est fermé dans E.
+\end{thm}
+
+Théorème de Hahn-Banach
+\begin{thm}
+Soit $E$ un \evn sur $\mathbb{R}$, $H \subset E$ un sous-espace vectoriel et $f: H \longrightarrow \mathbb{R}$ une forme linéaire continue sur $H$. Alors il existe une forme linéaire continue $F$ définie sur $E$ qui prolonge $f$ et de même norme c-a-d $F: E \longrightarrow \mathbb{R}$ continue $$F(x) = f(x), \enspace \forall x \in H$$ $$\lVert F \rVert = \lVert f \rVert $$
+\end{thm}
+
+
+\textbf{(Cours 9)}
+
+
+
+\begin{cor}
+Soit $E$ un \evn sur $\mathbb{R}$. ALors $E^1 \neq \emptyset$. De plus si $x_0 \in E$ non nul, alors il existe une forme linéaire continue $f_0$ tel que $f_0 (x_0) = \lVert x_0 \rVert$ et $\lVert f_0 \rVert = 1$
+\end{cor}
+
+\begin{cor}
+Soit $E$ un \evn . Alors l'application ... dur a écrire voir coro 4.7 page 3 cours 9.
+\end{cor}
+
+\begin{mydef}
+Soit $E$ un \evn . 
+\begin{enumerate}
+\item Un hyperplan de E est un ensemble de la forme: $$ H = \{ x \in E | f(x) = \alpha \}$$ où $f \in E^*$ non nulle et $\alpha \in \mathbb{R}$ ($f$ n'est pas nécessairement continue). On dit que $H$ est d'équation $f(x) = \alpha$.
+\item L'hyperplan $H$ est fermé \ssi $f$ est continue.
+\item Une partie $C \subset E$ est dite convexe \ssi $\forall x, y \in C$ et $\forall \lambda , \mu \in \mathbb{R}$ ($\lambda + \mu = 1$), on a $\lambda x + \mu y \in C$ avec (pas sure du reste)
+\end{enumerate}
+\end{mydef}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{flushleft}
+
+\end{document}
+
+%\\~\\ pour un double enter
+%\begin{} \end{}
+%... = 	\ldots
+% plus grand ou égale = \geq
+% somme produit \prod_{i = 1}^{k} (1-\frac{1}{p_i})
+% congrus \equiv et modulo \bmod
+% barre au dessus \overline{ }.
+% isomorphe = \simeq
+
+%$\lVert x \rVert$ = les barre de norme

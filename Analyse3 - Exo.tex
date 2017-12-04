@@ -1,0 +1,130 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{amssymb}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}[section]
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{amsthm}
+\usepackage{amsmath}
+\begin{document}
+
+%nouvelle commande
+
+\newcommand{\znz}{\mathbb{Z} / n \mathbb{Z} }
+\newcommand{\zmz}{\mathbb{Z} / m \mathbb{Z} }
+\newcommand{\zpz}{\mathbb{Z} / p \mathbb{Z} }
+\newcommand{\dbs}{\\~\\}
+\newcommand{\zdex}{\mathbb{Z} [x]}
+\newcommand{\qdex}{\mathbb{Q} [x]}
+\newcommand{\rdex}{\mathbb{R} [x]}
+\newcommand{\zdei}{\mathbb{Z} [i]}
+\newcommand{\Fp}{\mathbb{F}_p}
+\newcommand{\Fpn}{\mathbb{F}_{p^n}}
+\newcommand{\Fq}{\mathbb{F}_q}
+\newcommand{\Fpdex}{\mathbb{F}_p [x]}
+\newcommand{\Fqdex}{\mathbb{F}_q [x]}
+\newcommand{\evn}{espace vectoriel normé }
+\newcommand{\ssi}{\textit{si et seulement si} }
+\newcommand{\edm}{\textit{$(E,d)$} }
+
+
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\newtheorem{mydef}{Définition}
+\newtheorem{thm}{Théorème}
+\newtheorem{prop}{Proposition}
+\newtheorem{cor}{Corollaire}
+\newtheorem{lem}{Lemme}
+\newtheorem{rap}{Rappel}
+\newtheorem{rem}{Remarque}
+\newtheorem{propriete}{Propriétés}
+
+%debut du texte
+\begin{flushleft}
+
+\textit{Note de l'auteur, c'est un résumé des notes de cours d'analyse 3, pas tous les théorèmes, définitions, et autres y sont écrites, seules celles que je veux retenir et qui ne sont pas évidentes.}\dbs
+
+\textbf{(Cours 2)}
+
+\begin{mydef} 
+Soit $(E,d)$ un espace métrique et $A \subset E$.
+\begin{enumerate}
+\item Un point $a \in E$ est dit adhérent à $A$ si tout voisinage de $a$ rencontre $A$.
+\item On note $\bar{A} = $ l'ensemble des points adhérent à $A$.
+\item Un point $x \in A$ est dit intérieur à $A$ s'il existe une boule ouverte centré en $x$ et contenue dans $A$.
+\item On note $\mathring{A} = $ l'ensemble des points intérieurs de $A$.
+\end{enumerate}
+\end{mydef}
+
+\begin{mydef}
+Soit $(E,d)$ un espace métrique et $A \subset E$. $A$ est dense si tout point de $E$ est adhérent à $A$.
+\end{mydef}
+
+\begin{thm} 
+Soit $(E,d)$ un espace métrique et $A \subset E$.
+\begin{enumerate}
+\item $\bar{A}$ est le plus petit fermé contenant $A$.
+\item $\mathring{A}$ est le plus grand ouvert contenu dans $A$.
+\end{enumerate}
+\end{thm}
+
+\textbf{(Cours 3)}
+
+\begin{thm} 
+Soit $(E,d_E)$ et $(F,d_F)$ 2 espaces métriques et $f: E \longrightarrow F$ une application. Alors les 3 propriétés suivantes sont équivalentes:
+\begin{enumerate}
+\item L'application $f$ est continue sur $E$.
+\item Pour tout ouvert $U$ de $F$, $ f^{-1} (U) $ est un ouvert de $E$.
+\item Pour tout fermé $B$ de $F$, $ f^{-1} (B) $ est un fermé de $E$.
+\end{enumerate}
+\end{thm}
+
+\textbf{(Cours 4)}
+
+\underline{\textbf{Théorème Bolzano-Weirstrass}}
+\begin{thm}
+Soit $E$ un espace métrique. Il y a équivalence entre:
+\begin{enumerate}
+\item L'espace $E$ est compact.
+\item Toute suite de point de $E$ possède un point adhérent.
+\item Toute suite de point de $E$ possède une sous-suite convergente dans $E$.
+\end{enumerate}
+\end{thm}
+
+\textbf{(Cours 5)}
+
+\begin{prop}
+(Premières propriétés des suites de Cauchy). Soit $(E,d)$ un espace métrique.
+\begin{enumerate}
+\item Toute suite convergente est une suite de Cauchy.
+\item Toute suite de Cauchy est bornée.
+\item Toute suite extraite $(y_n)$ d'une suite de Cauchy $(x_n)$ est de Cauchy.
+\item Si $(x_n)$ est une suite de Cauchy admettant une sous-suite convergente, alors (x_n) est convergente.
+\end{enumerate}
+\end{prop}
+
+\begin{cor}
+Une suite de Cauchy est convergente \ssi elle a une valeur d'adhérence.
+\end{cor}
+
+
+
+
+\end{flushleft}
+
+\end{document}
+
+%\\~\\ pour un double enter
+%\begin{} \end{}
+%... = 	\ldots
+% plus grand ou égale = \geq
+% somme produit \prod_{i = 1}^{k} (1-\frac{1}{p_i})
+% congrus \equiv et modulo \bmod
+% barre au dessus \overline{ }.
+% isomorphe = \simeq
+
+%$\lVert x \rVert$ = les barre de norme
