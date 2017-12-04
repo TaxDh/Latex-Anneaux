@@ -31,6 +31,7 @@
 \newcommand{\evn}{espace vectoriel normé }
 \newcommand{\ssi}{\textit{si et seulement si} }
 \newcommand{\edm}{\textit{$(E,d)$} }
+\newcommand{\fdm}{\textit{$(F,d_F)$} }
 
 
 \newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
@@ -233,8 +234,71 @@ Une suite de Cauchy est convergente \ssi elle a une valeur d'adhérence.
 \end{cor}
 
 
+\begin{rem} 
+Souvent, pour montrer qu'une suite de Cauchy est convergente, on montre qu'elle possède une valeur d'adhérence.
+\end{rem}
+
+\begin{mydef} 
+Un espace métrique \edm est dit complet si toute suite de Cauchy de \edm est convergente dans \edm.
+\end{mydef}
+
+\begin{rem} 
+\begin{enumerate}
+\item La notion d'espace complet n'est pas topologique, c'est-à-dire que la notion n'est pas invariante par homéomorphisme. En effet $\mathbb{R}$ et $]-1,1[$ sont homéomorphe, mais $\mathbb{R}$ est complet et  $]-1,1[$ ne l'est pas.
+\item Soit \edm un espace métrique et $F \subset E$. $F$ est complet si l'espace métrique $(F, d_F)$ est complet, où $d_F$ est la métrique induite par $d$ sur $F$, c'est-à-dire $d = d|_F$ .Dans la suite, on note $d$ pour $d_F$: la restriction de $d$ à $F$.
+\end{enumerate}
+\end{rem}
+
+\begin{thm}
+Soit \edm un espace métrique \underline{complet} et $F \subset E$. Alors \fdm est complet \ssi $F$ est fermé de $E$.
+\end{thm}
+
+\begin{rem} 
+$]0,1[ \subset \mathbb{R}$ n'est pas complet, car $]0,1[$ n'est pas fermé. De même, $\mathbb {Q} \subset \mathbb{R}$ n'est pas complet, donc $\mathbb{Q}$ n'est pas fermé dans $\mathbb{R}$
+\end{rem}
 
 
+\begin{prop} 
+Soit \edm un espace métrique et $F \subset E$. Alors si $F$ est complet, alors $F$ est fermé.
+\end{prop}
+
+\begin{thm}
+Un produit fini ou dénombrable d'espaces métriques complets est complet.
+\end{thm}
+
+\begin{cor}
+$( \mathbb{R}^n, \lVert . \rVert)$ est complet, $\forall n \geq 1$. 
+\end{cor}
+
+
+
+
+
+
+
+%\begin{} \end{}
+.\\
+.\\
+.\\
+.\\
+.\\
+.\\
+.\\
+.\\
+.\\
+.\\
+.\\
+.\\
+.\\
+.\\
+.\\
+.\\
+.\\
+.\\
+.\\
+.\\
+.\\
+.\\
 \textbf{(Cours 6)}
 
 
