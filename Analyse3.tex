@@ -239,7 +239,7 @@ Souvent, pour montrer qu'une suite de Cauchy est convergente, on montre qu'elle 
 \end{rem}
 
 \begin{mydef} 
-Un espace métrique \edm est dit complet si toute suite de Cauchy de \edm est convergente dans \edm.
+Un espace métrique \edm est dit \underline{complet} si toute suite de Cauchy de \edm est convergente dans \edm.
 \end{mydef}
 
 \begin{rem} 
@@ -270,9 +270,81 @@ Un produit fini ou dénombrable d'espaces métriques complets est complet.
 $( \mathbb{R}^n, \lVert . \rVert)$ est complet, $\forall n \geq 1$. 
 \end{cor}
 
+\begin{thm}
+Un espace métrique \edm est compact \ssi il est précompact et complet
+\end{thm}
+
+\underline{\textbf{Théorème de Cantor}}
+\begin{thm}
+Soit \edm un espace métrique. Alors \edm est complet \ssi pour toute suite $(F_n)$ d'ensembles fermés non vides tels que
+\begin{enumerate}
+\item $F_1 \supset F_2 \supset F_3 \supset F_4 \supset  \ldots F_n \supset F_{n+1} \supset \ldots$  (on dit que $(F_n)$ est décroissante),
+\item $\lim\limits_{n \rightarrow \infty} diam(F_n) = 0$ ($diam(F_n) = $ diamètre de $F_n$)
+\end{enumerate}
+On a l'intersection des $(F_n)$ qui contient un et un seul point.
+\end{thm}
+
+\underline{\textbf{Théorème de Baire}}
+\begin{thm}
+Soit \edm un espace métrique complet et $(\theta_n)_{n \in \mathbb{N}}$ une suite d'ouverts dense dans $E$ ($\bar{\theta_n} = E$, $\forall n \in \mathbb{N}$). Alors $\bigcap\limits_{n \in \mathbb{N}} \theta_n$ est aussi dense dans $E$.
+\end{thm}
+
+\begin{cor}
+Soit \edm un espace métrique complet et $(F_n)$ une suite de fermés d'intérieur vide ($\mathring{F_n} = \emptyset$, $\forall n \geq 1$). Alors  $\bigcup\limits_{n \geq 1} F_n$ est d'intérieur vide.
+\end{cor}
+
+\begin{cor}
+Soit \edm un espacae métrique complet et $(F_n)$ une suite de fermés telle que $E = \bigcup\limits_{n} F_n$. Alors il existe $n_0 \in \mathbb(N)$ tel que $\mathring{F_{n_0}} \neq \emptyset$.
+\end{cor}
+
+\begin{thm}
+Si $f$ est une fonction continue du compact $K$ dans $\mathbb{R}$, alors $f$ est bornée sur $K$ et atteint sur $K$ sa borne supérieure et sa borne inférieure.
+ \end{thm}
+
+
+\underline{\textbf{Théorème de Heine}}
+\begin{thm}
+Soit $(E,d_E)$ un espace métrique compact, \fdm un espace métrique et $f: E \longrightarrow F$ une application continue. ALors $f$ est \underline{uniformément} continue.
+ \end{thm}
+
+\begin{mydef}
+Soit $(E,d_E)$ et \fdm deux espaces métrique et $f: E \longrightarrow F$ une application. On dit que $F$ est une\underline{contraction} (ou une application contractante) s'il existe une constante $k$ : $0 < k < 1$ vérifiant:
+$$ d_F (f(x), f(y)) \leq k d_E (x,y), \forall x, y \in E$$
+ \end{mydef}
+
+
+\underline{\textbf{Théorème deu point fixe de Banach}}
+\begin{thm}
+Soit \edm un espace métrique \underline{complet} et $f: E \longrightarrow E$ une \underline{contraction}. Alors il existe un unique point fixe de $f$, c'est-à-dire il existe un unique $a \in E$ tel que $f(a) = a$.
+ \end{thm}
 
 
 
+\textbf{(Cours 6)}
+
+
+\begin{rem}
+Soit $(K,d)$ un espace métrique compact et \edm un espace métrique complet. On note $\varphi (K,E)$ l'ensemble des fonctions continues de $K$ dans $E$. On définit l'application $d$ sur $C(K,E) $: $$ d(f,g) = \sup\limits_{x \in K} d(f(x), g(x))$$ Cette borne  supérieure est atteinte en au moins un point de $K$.
+\end{rem}
+
+\begin{thm}
+L'application $d$ définit une distance sur $C(K,E)$ appelée distance de la convergence uniforme.
+ \end{thm}
+
+
+\begin{thm}
+Si $K$ est compact et $E$ complet, alors $C(K,E)$ muni de la distance de convergence uniforme est \underline{complet}.
+ \end{thm}
+
+
+\begin{rem}
+Si $(f_n)_{n \in \mathbb{N}}$ est une suite de fonctions continues ($f_n \in C(K,E)$), et si $(f_n)_n$ converge vers $f$ pour la distance de la convergence uniforme, alors la limite de $f$ est continue. Inversement, si $(f_n)_n$ converge simplement et si $f$ est continue, la convergence n'est pas nécessairement uniforme.
+ \end{rem}
+
+
+\begin{thm}
+Soit $(f_n)$ une suite croissante de fonctions continues de l'espace compact $K$ dans $\mathbb{R}$
+ \end{thm}
 
 
 
@@ -299,12 +371,6 @@ $( \mathbb{R}^n, \lVert . \rVert)$ est complet, $\forall n \geq 1$.
 .\\
 .\\
 .\\
-\textbf{(Cours 6)}
-
-
-\begin{thm}
-Soit $(E,d)$ un espace métrique \underline{complet} et $F \subset E$. Alors $(F,d)$ est complet \ssi $F$ est fermé de $E$.
-\end{thm}
 
 
 \textbf{(Cours 8)}
