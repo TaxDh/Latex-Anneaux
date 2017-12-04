@@ -313,7 +313,7 @@ $$ d_F (f(x), f(y)) \leq k d_E (x,y), \forall x, y \in E$$
  \end{mydef}
 
 
-\underline{\textbf{Théorème deu point fixe de Banach}}
+\underline{\textbf{Théorème du point fixe de Banach}}
 \begin{thm}
 Soit \edm un espace métrique \underline{complet} et $f: E \longrightarrow E$ une \underline{contraction}. Alors il existe un unique point fixe de $f$, c'est-à-dire il existe un unique $a \in E$ tel que $f(a) = a$.
  \end{thm}
@@ -324,7 +324,7 @@ Soit \edm un espace métrique \underline{complet} et $f: E \longrightarrow E$ un
 
 
 \begin{rem}
-Soit $(K,d)$ un espace métrique compact et \edm un espace métrique complet. On note $\varphi (K,E)$ l'ensemble des fonctions continues de $K$ dans $E$. On définit l'application $d$ sur $C(K,E) $: $$ d(f,g) = \sup\limits_{x \in K} d(f(x), g(x))$$ Cette borne  supérieure est atteinte en au moins un point de $K$.
+Soit $(K,d)$ un espace métrique compact et \edm un espace métrique complet. On note $C(K,E)$ l'ensemble des fonctions continues de $K$ dans $E$. On définit l'application $d$ sur $C(K,E) $: $$ d(f,g) = \sup\limits_{x \in K} d(f(x), g(x))$$ Cette borne  supérieure est atteinte en au moins un point de $K$.
 \end{rem}
 
 \begin{thm}
@@ -343,9 +343,38 @@ Si $(f_n)_{n \in \mathbb{N}}$ est une suite de fonctions continues ($f_n \in C(K
 
 
 \begin{thm}
-Soit $(f_n)$ une suite croissante de fonctions continues de l'espace compact $K$ dans $\mathbb{R}$
+Soit $(f_n)$ une suite croissante de fonctions continues de l'espace compact $K$ dans $\mathbb{R}$, $f: K \longrightarrow \mathbb{R}$ une fonction continue. On suppose que $(f_n)_n$ converge simplement vers $f$. Alors $(f_n)_n$ converge uniformément vers $f$.
  \end{thm}
 
+
+\begin{thm}
+Si $H \subset C(K,E)$ compact et $x \in K$, alors l'ensemble $$H(x) = \{ f(x), f \in H \}$$ est compact dans $E$.
+ \end{thm}
+
+
+\begin{mydef}
+Une partie $H$ de $C(K,E)$ est dite \underline{équicontinue} au point $x$ de $K$ si, pour tout $ \epsilon > 0$, il existe un voisinage $V$ de $x$ dans $K$ tel que, $$d(f(x),f(y)) < \epsilon$$ $\forall y \in V$ et $\forall f \in H$. 
+ \end{mydef}
+
+
+\begin{thm}
+Si $H \subset C(K,E)$ une partie compacte, alors $H$ est équicontinue en tout point de $K$.
+ \end{thm}
+
+
+\begin{thm}
+Si $H \subset C(K,E)$ une partie relativement compact, alors l'ensemble $H(x) = \{ f(x), f \in H \}$ est relativement compact dans $E$ et $H$ est équicontinue en chaque point de $K$.
+\end{thm}
+
+\underline{\textbf{Théorème de Ascoli-Arzela}}
+\begin{thm}
+Soit $K,d)$ un espace métrique compact, \edm un espace métrique complet et $H \subset C(K,E)$ une partie non vide. On suppose que:
+\begin{enumerate}
+\item $H(x)$ est relativement compact pour tout $x \in K$;
+\item $H$ est équicontinue en chaque point $x \in K$.
+\end{enumerate}
+Alors $H$ est relativement compact dans $C(K,E)$
+\end{thm}
 
 
 %\begin{} \end{}
