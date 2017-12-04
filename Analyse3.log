@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.12.4)  4 DEC 2017 14:43
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.12.4)  4 DEC 2017 18:38
 entering extended mode
-**C:/Users/kf891141.ENS/Desktop/math/Latex-Math/Analyse3.tex
-(C:/Users/kf891141.ENS/Desktop/math/Latex-Math/Analyse3.tex
+**C:/Users/kf891141/Desktop/latex/Latex-Math/Analyse3.tex
+(C:/Users/kf891141/Desktop/latex/Latex-Math/Analyse3.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -331,10 +331,10 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 \c@theorem=\count93
 \c@definition=\count94
 
-(C:\Users\kf891141.ENS\AppData\Roaming\MiKTeX\2.9\tex\latex\setspace\setspace.s
-ty
+(C:\Users\kf891141\AppData\Roaming\MiKTeX\2.9\tex\latex\setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
-) ("C:\Programs\MiKTeX 2.9\tex\latex\ams\classes\amsthm.sty"
+)
+("C:\Programs\MiKTeX 2.9\tex\latex\ams\classes\amsthm.sty"
 Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks19
 \thm@bodyfont=\toks20
@@ -404,7 +404,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-(C:\Users\kf891141.ENS\Desktop\math\Latex-Math\Analyse3.aux)
+(C:\Users\kf891141\Desktop\latex\Latex-Math\Analyse3.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
@@ -463,43 +463,43 @@ LaTeX Info: Redefining \up on input line 14.
 \c@rap=\count112
 \c@rem=\count113
 \c@propriete=\count114
-LaTeX Font Info:    Try loading font information for U+msa on input line 55.
+LaTeX Font Info:    Try loading font information for U+msa on input line 58.
 ("C:\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 55.
+LaTeX Font Info:    Try loading font information for U+msb on input line 58.
 
 ("C:\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
-{C:/Users/kf891141.ENS/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] 
-[3] [4] [5] [6]
-[7] [8] (C:\Users\kf891141.ENS\Desktop\math\Latex-Math\Analyse3.aux) ) 
+{C:/Users/kf891141/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] 
+[4] [5] [6] [7]
+[8] [9] (C:\Users\kf891141\Desktop\latex\Latex-Math\Analyse3.aux) ) 
 Here is how much of TeX's memory you used:
- 2905 strings out of 494045
- 34551 string characters out of 3150381
+ 2907 strings out of 494045
+ 34526 string characters out of 3150393
  99902 words of memory out of 3000000
- 6169 multiletter control sequences out of 15000+200000
+ 6171 multiletter control sequences out of 15000+200000
  10509 words of font info for 35 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 27i,6n,24p,457b,327s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\User
-s\kf891141.ENS\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm
-1200.pk> <C:\Users\kf891141.ENS\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
-en\ec\dpi600\ecbx1200.pk> <C:\Users\kf891141.ENS\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk><C:/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmex10.pfb><C:/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmmi12.pfb><C:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pf
-b><C:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb><C:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmsy8.pfb><C:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pf
-b>
-Output written on Analyse3.pdf (8 pages, 162022 bytes).
+ 27i,12n,24p,454b,265s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\k
+f891141\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
+> <C:\Users\kf891141\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ecbx1200.pk> <C:\Users\kf891141\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
+ppen\ec\dpi600\ecti1200.pk><C:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmex10.pfb><C:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+><C:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr6.pfb><C:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr8.pfb><C:/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Analyse3.pdf (9 pages, 180550 bytes).
 PDF statistics:
- 228 PDF objects out of 1000 (max. 8388607)
+ 242 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

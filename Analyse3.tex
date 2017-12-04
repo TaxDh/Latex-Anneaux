@@ -32,6 +32,12 @@
 \newcommand{\ssi}{\textit{si et seulement si} }
 \newcommand{\edm}{\textit{$(E,d)$} }
 \newcommand{\fdm}{\textit{$(F,d_F)$} }
+\newcommand{\nrm}{\lVert . \rVert }
+\newcommand{\vertiii}[1]{{\left\vert\kern-0.25ex\left\vert\kern-0.25ex\left\vert #1 
+    \right\vert\kern-0.25ex\right\vert\kern-0.25ex\right\vert}}
+\newcommand{\fef}{\textit{$f:E \longrightarrow F$} }
+
+
 
 
 \newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
@@ -48,6 +54,9 @@
 \begin{flushleft}
 
 \textit{Note de l'auteur, c'est un résumé des notes de cours d'analyse 3, pas tous les théorèmes, définitions, et autres y sont écrites, seules celles que je veux retenir et qui ne sont pas évidentes.}\dbs
+
+\textbf{\underline{Chapitre 1}}\\~\\
+
 
 \textbf{(Cours 2)}
 
@@ -376,34 +385,100 @@ Soit $K,d)$ un espace métrique compact, \edm un espace métrique complet et $H 
 Alors $H$ est relativement compact dans $C(K,E)$
 \end{thm}
 
+\textbf{\underline{Chapitre 2 - Analyse linéaire dans les espaces de Banach}}\\~\\
 
-%\begin{} \end{}
-.\\
-.\\
-.\\
-.\\
-.\\
-.\\
-.\\
-.\\
-.\\
-.\\
-.\\
-.\\
-.\\
-.\\
-.\\
-.\\
-.\\
-.\\
-.\\
-.\\
-.\\
-.\\
+\textbf{(Cours 7)}
+
+\begin{mydef}
+Soit $E$ un espace vectoriel sur $\mathbb{R}$. On appelle une norme sur $E$ une application $\lVert . \rVert$ de $E$ dans $[0, \infty[$ vérifiant:
+\begin{enumerate}
+\item $ \lVert x \rVert = 0  \Leftrightarrow x = 0$.
+\item $\lVert \lambda x \rVert = | \lambda | \lVert x \rVert$ , pour tout $\lambda \in \mathbb{R}$ et tout $x \in E$.
+\item $\lVert \lambda x+y \rVert \leq \lVert x \rVert + \lVert y \rVert$, $\forall x \in E, \forall y \in E$.
+\end{enumerate}
+Un espace vectoriel muni d'une norme est appelé un espace \underline{vectoriel normé}. La norme est habituellement noté  $\lVert . \rVert$.
+\end{mydef}
+
+\begin{prop}
+Si $\lVert . \rVert$ est une norme sur $E$, alors l'application $(x,y) \in E \mapsto \lVert x-y \rVert$ est une distance sur $E$.
+\end{prop}
+
+(remarque incomplète - voir page 2-3 du cours 7 pour les détails)
+\begin{rem}
+D'après la proposition précédente, tout espace normé est métrique. Une suite $(x_n)_n$ de $E$ est convergente, si $(x_n)_n$ converge pour la distance associée à $\lVert . \rVert$. De même, une application $f: E \longrightarrow F$, est continu en $x  \in E$, où $E$ et $F$ sont deux espaces normés.
+\end{rem}
+
+\begin{thm}
+Si $(E, \nrm )$ est un espace vectoriel normé, alors les applications
+\begin{enumerate}
+\item $(x,y) \in E \times E \longmapsto x+y \in E$, est continue.
+\item $(\lambda, x) \in \mathbb{R} \times E \longmapsto \lambda x \in E$, est continue.
+\item $x \in E \longmapsto \lVert x \rVert \in [0, \infty [ $, est continue.
+\end{enumerate}
+\end{thm}
+
+
+\begin{mydef}
+On appelle un espace de \underline{Banach} tout espace vectoriel normé complet pour la distance associée à la norme. 
+\end{mydef}
+
+\begin{rap}
+Soit $E$ et $F$ deux espaces vectoriels sur $\mathbb{R}$ et $f: E \longrightarrow F$ une application. Alors $f$ est linéaire \ssi $$f( \lambda x + \mu y) = \lambda f(x) + \mu f(y)$$
+$\forall x,y \in E$ et $\lambda , \mu \in \mathbb{R}$.
+\end{rap}
+
+\begin{thm}
+Soit $f:E \longrightarrow F$ une application linéaire de l'espace vectoriel normé $(E, \nrm_E)$ dans l'espace vectoriel normé $(F, \nrm_F)$. Les propriétés suivantes sont équivalentes:
+\begin{enumerate}
+\item L'application linéaire $f$ est continue sur $E$;
+\item $f$ est continue en 0;
+\item $f$ est uniformément continue sur $E$;
+\item $f$ est lipschitzienne;
+\item Il existe une constante $k > 0$, telle que $\lVert f(x) \rVert_F \leq k \lVert x \rVert_E$, $\forall x \in E$.
+\end{enumerate}
+\end{thm}
+
+On note $L(E,F)  =$ l'ensemble des applications linéaires continues de l'espace normé $(E, \nrm_E)$ dans l'espace vectoriel normé $(F, \nrm_F)$.
+
+\begin{rem}
+$L(E,F)$ est un espace vectoriel sur $\mathbb(R)$ (évident).
+\end{rem}
+
+\begin{mydef}
+Soit $f \in L(E,F)$. On appelle la norme de $f$ la constante définie par : $$\vertiii{f} = \sup\limits_{x \in E} \lVert f(x) \rVert_F$$
+\end{mydef}
+
+\begin{thm}
+Soit $f \in L(E,F)$. Alors on a: 
+\begin{align*}
+\vertiii{f} : &= \sup\limits_{x \in E , \lVert x \rVert_E \leq 1} \lVert f(x) \rVert_F\\
+	       &=\sup\limits_{x \in E , \lVert x \rVert_E = 1} \lVert f(x) \rVert_F\\
+		&= \sup\limits_{x \in E , \lVert x \rVert_E \neq 0} frac{\lVert f(x) \rVert_F}{\lVert x \rVert_E}\\
+		&= \min \{ k > 0; \lVert f(x) \rVert_F \leq k \lVert x \rVert_E , \forall x \in E \}
+\end{align*}
+\end{thm}
+
+\begin{thm}
+L'application $f \in L(E,F) \mapsto \vertiii{f}$ est une norme sur $L(E,F)$. De plus, si $F$ est un espace de Banach, alors $(L(E,F), \vertiii{.})$ est aussi un espace de Banach.
+\end{thm}
+
+\begin{thm}
+Soit $E$, $F$ et $G$ trois espaces vectoriels normés et $f:E \longrightarrow F$ et $g: F \longrightarrow G$ deux applications linéaires continues. Alors l'application $g \circ f : E \longrightarrow G$ est linéaire et continue et $$ \vertiii{g \circ f} \leq \vertiii{g} . \vertiii{f}$$ En particulier, si $E = F = G$, alors $ L(E):= L(E,E)$ est une algèbre de Banach.
+\end{thm}
+
+(Banach)
+\begin{thm}
+Soit $E$ et $F$ deux espaces de Banach et $f:E \longrightarrow F$ une application linéaire continue et bjective de $E$ sur $F$. Alors $f^{-1}$ est continue de $F$ sur $E$.
+\end{thm}
+
+\begin{mydef}
+Une application \underline{linéaire} \fef est dite isomorphisme si elle est continue, bijective et son inverse $f^{-1}$ est aussi continue.
+\end{mydef} 
+
 
 
 \textbf{(Cours 8)}
-\begin{cor} Toutes les normes sur un espace vectoriel normé sont équivalentes. Et elles sont topologiquement équivalentes. (Voir théorème 3.1 et corollaire 3.3).
+\begin{cor} Toutes les normes sur un espace vectoriel normé (pas nécessairement de dimension fini) sont équivalentes. Et elles sont topologiquement équivalentes. (Voir théorème 3.1 et corollaire 3.3).
 \end{cor}
 
 \begin{thm}
@@ -422,17 +497,16 @@ Si $E$ est un espace vectoriel normé de dimension finie, alors la boule unité 
 Si $E$ est un \evn de dimension finie, alors $K \subset E$ est compact de $E$ \ssi $K$ est fermé borné.
 \end{thm}
 
-(Théorème de Riez
+\textbf{\underline{(Théorème de Riez)}}
 \begin{thm}
 Soit $E$ un \evn . Si la boule unité fermée $\bar{B}(0,1)$ est compacte, alors $E$ est de dimension finie.
 \end{thm}
 
-\begin{rq}
+\begin{rem}
 En fait, s'il existe une boule fermée et compacte, alors l'espace $E$ est de dimension finie. Suite de la remarque cours 8 page 3 du pdf.
-\end{rq}
+\end{rem}
 
 
-\underline{Théorème de Hahn-Banach}
 \begin{thm}
 Soit $E$ un \evn , $F \subset E$ un sous-espace vectoriel de dimension finie et $x \in E$. Alors il existe un point $v \in F$ tel que: $$d(x,F) = \lVert x - v \rVert$$
 \end{thm}
@@ -446,18 +520,32 @@ Soit $E$ un \evn et $F \subset E$ un sous-espace vectoriel. Alors Si $F$ est de 
 Si $\bar{x} \in E/F$, alors $\lVert \bar{x} \rVert := inf \lVert y \rVert$, pour $y \in \bar{x}$ (pour y est en dessous du inf..., voir page 5 cours 8)
 
 \begin{thm}
-L'application $\bar{x} \in E/F \mapsto \lVert \bar{x} \rVert = inf \lVert y \rVert$ définit une norme sur $E/F$ pour laquelle l'application ... trop long à écrire, voir thm 4.3
+L'application $\bar{x} \in E/F \mapsto \lVert \bar{x} \rVert = inf \lVert y \rVert$ définit une norme sur $E/F$ pour laquelle l'application
+\begin{align*}
+\Pi: E &\longrightarrow E/F\\
+        x	&\mapsto \bar{x} 
+\end{align*}
+est continue, de plus, $\forall x  \in E$, $$\lVert \bar{x} \rVert = \lVert \Pi (x) \rVert = d(x,F)$$
+La norme définie sur $E/F$ est dite la \underline{norme quotient}.
 \end{thm}
 
 \begin{thm}
-Soit $E$ et $F$ 2 \evn et $f: E \longrightarrow F$ une application linéaire de rang fini. ALors $f$ est continue sur $E$ \ssi son noyau est fermé dans E.
+Soit $E$ et $F$ 2 \evn et $f: E \longrightarrow F$ une application linéaire de rang fini. Alors $f$ est continue sur $E$ \ssi son noyau est fermé dans E.
 \end{thm}
 
-Théorème de Hahn-Banach
+\underline{Forme analytique du théorème de Hahn - Banach}\\
+Soit $E$ un espace vectoriel normé sur $\mathbb{R}$. On rappelle qu'une forme linéaire est une application linéaire définie sur $E$ et à valeurs dans $\mathbb{R}$. Le théorème de Hahn-Banach concerne le prolongement d'une forme linéaire définie sur un sous-espace vectoriel de $E$ en une forme linéaire définie sur $E$ tout entier.\\
+
+\textbf{\underline{Théorème de Hahn-Banach}}
 \begin{thm}
 Soit $E$ un \evn sur $\mathbb{R}$, $H \subset E$ un sous-espace vectoriel et $f: H \longrightarrow \mathbb{R}$ une forme linéaire continue sur $H$. Alors il existe une forme linéaire continue $F$ définie sur $E$ qui prolonge $f$ et de même norme c-a-d $F: E \longrightarrow \mathbb{R}$ continue $$F(x) = f(x), \enspace \forall x \in H$$ $$\lVert F \rVert = \lVert f \rVert $$
 \end{thm}
 
+
+\textbf{\underline{Lemme de Zorn}}
+\begin{lem}
+Tout ensemble ordonné, inductif, non vide, admet un élément maximal.
+\end{lem}
 
 \textbf{(Cours 9)}
 
