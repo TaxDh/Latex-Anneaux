@@ -635,6 +635,55 @@ Si $\fuf$ et $g: U \longrightarrow F$ sont différentiables, alors $f+g $ est di
 L'ensemble des applications différentiables sur $U$ est un espace vectoriel et la différentiation $d$ est une application linéaire de cet espace vectoriel dans l'ensemble des applications de $U$ dans $L(E,F)$.
 \end{rem}
 
+\textbf{(Cours 10)}\\~\\
+
+\begin{thm}
+Soit $E$, $F$ et $G$ trois espaces vectoriels normés, $U \subset E$ un ouvert et $ V \subset F$ un ouvert. Si $\fuf$ est différentiable en un point $x \in U$ et si $g: V \subset F \longrightarrow G$ est différentiable en $f(x) \in V$, alors la fonction composée $g \circ f : U \longrightarrow G$ est différentiable en $x$ et $$ d( g \circ f ) (x) = dg(f(x)) . (df(x).h)$$ $\forall x \in U$ et $\forall h \in E$.
+\end{thm}
+
+\begin{rem}
+C'est un résultat très important, c'est la "dérivation en chaine" ou "règle de dérivation des fonctions composées. Voir exemple page 1 cours 10.
+\end{rem}
+
+\underline{2. Fonctions définies sur un espace produit}\\~\\
+Si 
+\begin{align*}
+f: U \subset E_1 \times E_2 \times \cdots \times E_n & \longrightarrow F\\
+					x & \longmapsto f(x)
+\end{align*}
+est différentiable. Alors les applications partielles $$y_i \longmapsto f(x_1, \cdots , x_{i-1} , y_i, x_{i+1} , \cdots , x_n)$$ sont différentiables et si on note $ d_i f(x_1, \cdots , x_n)$ leur différentielles en $x_i$, alors $$df(x_1, \cdots , x_n) = \sum\limits_{i=1}^n d_i f(x_1, \cdots , x_n) . h_i$$ avec $h \in E_1 \times \cdots \times E_n$ et $h = (h_1, \cdots , h_n)$.
+
+\underline{Différentielles en dimension finie}\\~\\
+On suppose que $E = \mathbb{R}^n$ et $F = \mathbb{R}^k$. Soit $B = \{ e_1, \cdots , e_n \}$, la base canonique de $\mathbb{R}^n$ et $\varepsilon = \{ \varepsilon_1, \cdots , \varepsilon_n \}$ la base canonique de $\mathbb{R}^k$. Alors si $f: U \subset \mathbb {R}^n \longrightarrow \mathbb{R}^k$ est différentiable, alors les applications partielles:
+\begin{align*}
+g_i: \Theta_i(x) & \longrightarrow F\\
+					t & \longmapsto  f(x_1, \cdots , x_{i-1} , t , x_{i+1} , \cdots , x_n)
+\end{align*}
+$$g_i(t) = f(x+(t-x_i) e_i$$ où $$ \Theta_i (x) = \{ t \in \mathbb{R} | (x_1, \cdots , x_{i-1} , t , x_{i+1} , \cdots , x_n) \in U \}.$$ On note $\dfrac{df}{dx_i} (x)$ la dérivée de $g_i$ en $x_i$. Alors on a: (...) texte à lire page 4.
+
+\begin{thm}
+$f: u \subset \mathbb{R}^n \longrightarrow \mathbb{R}^k$ est de classe $C^1$ (continument différentiable) \ssi ses dérivées partielles existent et sont continues sur $U$.
+\end{thm} 
+
+(à lire, texte du théorème des accroissements fini page 4)\\~\\
+
+\begin{thm}
+Soit $I \subset \mathbb{R}$ un intervalle ouvert, $F$ un espace vectoriel normé sur $\mathbb{R}$ et $f: I \longrightarrow \mathbb{R}$ une fonction dérivable. On suppose qu'il existe $k > 0$ tel que $\lVert f'(t) \rVert_F \leq k$, $\forall t \in I$. Alors $$ \lVert f(x) - f(y) \rVert_F \leq k |x-y|$$ $\forall x \in I$ et $\forall y \in I$.
+\end{thm}
+
+\begin{thm}
+Soit $f: I \subset \mathbb{R} \longrightarrow F$ une fonction dérivable sur l'intervalle ouvert $I$ et à valeures dans l'espace de Banach $F$ sur $\mathbb{R}$. On suppose qu'il existe une fonction $\varphi : I \longrightarrow \mathbb{R}$ dérivable telle que $$\lVert \varphi^\prime (t) \rVert_F \leq \varphi^\prime (t), \forall t\in I$$
+$$ \text{Alors } \lVert f(x) - f(y) \rVert_F \leq | \varphi(x) - \varphi(y) | \text{, } \forall x \in I \text{, } \forall y \in I$$
+\end{thm}
+
+\begin{thm}
+Soit $f: U \subset E \longrightarrow F$ une fonction différentiable sur l'ouvert \underline{convexe} U. On suppose qu'il existe une constate $k > 0$ tel que $\vertiii{df(x)} \leq k$, $\forall x \in U$ $$ \text{Alors } \lVert f(x) - f(y) \rVert_F \leq k \lVert x-y \rVert_E \text{, } \forall x \in U \text{, } \forall y \in U$$
+\end{thm}
+
+\begin{rem}
+En fait on peut montrer l'inégalité plus fine suivante: $$ \text{Alors } \lVert f(x) - f(y) \rVert \leq \sup\limits_{t \in [0,1]} \vertiii{df(y + (1-t)x} . \lVert x-y \rVert_E$$
+\end{rem}
+
 %\begin{} \end{}
 
 
@@ -675,7 +724,7 @@ L'ensemble des applications différentiables sur $U$ est un espace vectoriel et 
 %\begin{} \end{}
 %... = 	\ldots
 % plus grand ou égale = \geq
-% somme produit \prod_{i = 1}^{k} (1-\frac{1}{p_i})
+% somme produit \prod_{i = 1}^{k} (1-\dfrac{1}{p_i})
 % congrus \equiv et modulo \bmod
 % barre au dessus \overline{ }.
 % isomorphe = \simeq
