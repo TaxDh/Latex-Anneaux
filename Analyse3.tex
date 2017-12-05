@@ -36,7 +36,7 @@
 \newcommand{\vertiii}[1]{{\left\vert\kern-0.25ex\left\vert\kern-0.25ex\left\vert #1 
     \right\vert\kern-0.25ex\right\vert\kern-0.25ex\right\vert}}
 \newcommand{\fef}{\textit{$f:E \longrightarrow F$} }
-
+\newcommand{\fuf}{\textit{$f:U \longrightarrow F$} }
 
 
 
@@ -593,10 +593,47 @@ Soit $\qquad F \nsubseteq E$ un sous-espace vectoriel fermé de $E$ ($F \neq E$)
 
 \textbf{\underline{Chapitre 3 - Calcul différentiel dans les espaces de Banach}}\\~\\
 
+Soit $E$ et $F$ deux espaces vectoriels normés, $U \subset E$ un ouvert non vide et $\fuf$ une application.
 
+\begin{mydef}
+Soit $x_0 \in U$. On dit que $f$ est différentiable en $x_0$ s'il existe une application linéaire continue $l \in L(E,F)$ tel que  $$ \lim\limits_{h \rightarrow 0_E} \frac{ \lVert f(x_0 + h ) - f(x_0) - l(h) \rVert_F}{ \lVert h  \rVert_E} = 0$$
+\end{mydef}
 
+\begin{rem}
+Autrement dit, $f$ est différentiable en $x_0$ , s'il existe une application linéaire continue $l \in L(E,F)$, $R > 0$ et $\varepsilon : B_E (0_E, R) \longrightarrow \mathbb{R}$, où la fonction $\varepsilon$ vérifie: $\lim\limits_{h \rightarrow 0_E} \varepsilon (h) = 0$, telle que $$\lVert f(x_0 + h ) - f(x_0) - l(h) \rVert_F =  \varepsilon (h)  \lVert h  \rVert_E$$
+Il suffit en effet de poser $\varepsilon (0_E) = 0$ et si $R > 0$ est choisi de sorte que la boule $B(x_0 , R)$ de centre $x_0$ et de rayon $R > 0 $ soit incluse dans $U$ et $$ \varepsilon (h) :=  \frac{ \lVert f(x_0 + h ) - f(x_0) - l(h) \rVert_F}{ \lVert h  \rVert_E}$$
+si $h \in B(0_E , R)$
+\end{rem}
 
+\begin{prop}
+Si $f$ est différentiable en $x_0$, alors $f$ est nécessairement continue en $x_0$.
+\end{prop}
 
+\underline{Notation:}\\
+L'application $l$ dans la définition précédente (avant la remarque et la proposition) dépend du point $x_0$. Il faut donc adopter une notation faisant apparaître le point $x_0$. On utilise la notation $l = df(x_0)$. Donc $df(x_0)$ est elle-même une application. On l'appelle la différentielle de $f$ en $x_0$.
+
+\begin{mydef}
+On dit que $f$ est \underline{différentielle} sur $U$ si elle est différentiable en tout point $x \in U$. On appelle la différentielle de $f$ la fonction
+\begin{align*}
+df : U & \longrightarrow L(E,F)\\
+      x	& \longmapsto df(x)
+\end{align*}
+Si de plus cette application est ocntinue, on dit que $f$ est de classe $C^1$ (ou continument différentiable).
+\end{mydef}
+
+\begin{rem}
+Il ne faut pas confondre $df$ et sa valeur en $x$, $df(x)$. La continuité de $df$ n'a rien à voir avec la continuité de $df(x)$ (cette dernière est toujours continue, mais $df$ ne l'est pas en général). Aussi $df(x)$ est linéaire de $E$ dans $F$, mais $df$ n'est pas linéaire en général de $U$ dans $L(E,F)$.
+\end{rem}
+
+(à voir exemples pages 7-8 cours 9)\\
+
+\begin{thm}
+Si $\fuf$ et $g: U \longrightarrow F$ sont différentiables, alors $f+g $ est différentiable et $d(f+g) = df + dg$, c'est-à-dire $d(f+g)(x)(h) = df(x)(h) + dg(x)(h)$.\\L'application $( \lambda f )$ est différentiable $\forall \lambda \in \mathbb(R)$ et $d( \lambda f) = \lambda df$.
+\end{thm}
+
+\begin{rem}
+L'ensemble des applications différentiables sur $U$ est un espace vectoriel et la différentiation $d$ est une application linéaire de cet espace vectoriel dans l'ensemble des applications de $U$ dans $L(E,F)$.
+\end{rem}
 
 %\begin{} \end{}
 
