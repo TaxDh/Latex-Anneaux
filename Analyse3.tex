@@ -40,6 +40,8 @@
 
 
 
+
+
 \newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
 \newtheorem{mydef}{Définition}
 \newtheorem{thm}{Théorème}
@@ -684,18 +686,105 @@ Soit $f: U \subset E \longrightarrow F$ une fonction différentiable sur l'ouver
 En fait on peut montrer l'inégalité plus fine suivante: $$ \text{Alors } \lVert f(x) - f(y) \rVert \leq \sup\limits_{t \in [0,1]} \vertiii{df(y + (1-t)x} . \lVert x-y \rVert_E$$
 \end{rem}
 
+\textbf{(Cours 11)}\\~\\
+
+
+\begin{mydef}
+Soit $E$ un \evn et $U \subset E$ un ouvert. $U$ est dit connexe s'il n'admet pas de sous-ensemble à la fois ouvert et fermé autre que l'ensemble vide et lui-même.
+\end{mydef}
+
+\begin{rem}
+$U$ est connexe $\Leftrightarrow \forall U_1, U_2$ ouvert, $U_1 \bigcap U_2 = \empty$. Si $U=U_1 \bigcup U_2$ alors $U_1 = \emptyset$ ou $U_2 = \emptyset$.
+\end{rem}
+
+
+\begin{thm}
+Soit $f: U \subset E \longrightarrow F$ une fonction différentiable sur un ouvert connexe $U$, telle que $df(u) = 0, \forall x \in U$. Alors $f$ est une application constante.
+\end{thm}
+
+
+
+\begin{thm}
+Soit $I \subset \mathbb{R}$ un intervalle ouvert et $f: I \longrightarrow F$ de classe $C^1$. Alors $f$ est localement lipshitzienne. C'est-à-dire $\forall J \subset I$ compact, $\exists K_J >0 $ telle que $$ \lVert f(x) - f(y) \rVert_F \leq k |x-y|, \forall x, y \in J$$
+\end{thm}
+
+
+\begin{thm}
+théorème 2.7 des notes de cours (11), je ne comprends pas...
+\end{thm}
+
+\underline{---------------------------------------------------------------------------------------------------------------}
+À partir d'ici $E$ et $F$ sont des R-espaces de \underline{Banach}
+
+\begin{mydef}
+Soit $U \subset E$ et $V \subset F$ deux ouverts. On dit qu'une application $f:U \longrightarrow V$ est un \underline{$C^1$-difféomorphisme} \ssi :
+\begin{enumerate}
+\item $f$ est une bijection;
+\item $f$ est de classe $C^1$;
+\item $f^{-1}$ est de classe $C^1$.
+\end{enumerate}
+\end{mydef}
+
+(exemple page 3 - cours 11)
+
+
+\begin{thm}
+Si $f: U \longrightarrow V$ est un $C^1$-difféomorphisme, alors sa différentielle $df(x)$ est un isomorphisme de $E$ dans $F$, $\forall x \in U$. De plus la différentielle de $f^{-1}$ est donnée par: $$df^{-1}(y)= (df(f^{-1}(y))^{-1}, \forall y \in V$$
+\end{thm}
+
+
+\begin{cor}
+Si $f: U \subset E \longrightarrow V \subset F$ est un $C^1$-difféomorphisme, alors $E$ et $F$ sont isomorphe. De plus, si $dim(E) < \infty$, alors $dim(F) < \infty$ et $dim(E) = dim(F).$
+\end{cor}
+
+\underline{\textbf{Théorème d'inversion locale}}\\~\\
+
+\begin{thm}
+Si $f: U \subset E \longrightarrow V \subset F$ est de classe $C^1$, $a\in U$ est tel que $df(a)$ soit un isomorphisme de $E$ dans $F$, alors il \underline{existe} un voisinage ouvert $U_a$ de $a$ dans $U$ et un voisinage ouvert $V_b$ de $b=f(a)$ dans $V$ tel que la restriction de $f$ à $U_a$ soit un $C^1$-difféomorphisme de $U_a$ sur $V_b$
+\end{thm}
+
+(le prochain théorème sert pour prouver le thm d'inversion local)\\
+\underline{\textbf{Théorème de Banach-Picard}}\\~\\
+
+\begin{thm}
+Soit $E$ un espace de Banach et $B \subset E$ un fermé. Si $f:B \longrightarrow B$ est contractante, c'est-à-dire $\exists k \in ]0,1[$ tel que 
+$$\lVert f(x) - f(y) \rVert_F \leq k \lVert x-y \rVert , \forall x,y \in B,$$ Alors il existe un unique point fixe $x \in B : f(x) = x$.
+\end{thm}
+
+\underline{\textbf{Théorème d'inversion globale}}\\~\\
+
+\begin{thm}
+Soit $f: U \subset E \longrightarrow F$ de classe $C^1$. $f$ est un $C^1$-difféomorphisme de $U$ dans $f(U)$ \ssi $f$ est injective et $df(x)$ est un isomorphisme de $E$ dans $F$, pour tout $x \in U$.
+\end{thm}
+
+\begin{cor}
+Soit $U \subset \mathbb{R}^n$ et $f: U \longrightarrow  \mathbb{R}^n$ $x \mapsto (f_1(x), \cdots, f_n(x))$ injective et de classe $c^1$. Alors $f$ est un $C^1$-difféomorphisme de $U$ dans $f(U)$ \ssi $det(Jf(x)) \neq 0 , \forall x \in U$, où $Jf(x)$ est la matrice jacobienne de $f$ (voir notation page 5 cours 11, corollaire 3.7)
+\end{cor}
+
+\underline{\textbf{Théorème des fonctions implicites}}\\~\\
+
+\begin{thm}
+Soit $E$, $F$ et $G$ trois espaces de Banach, $U \subset E \times F$ un ouvert et $f: U \longrightarrow G$ de classe $C^1$. On suppose qu'il existe $(a,b) \in U$ tel que $f(a,b) = 0_G$ et la différentielle partielle de $f$ par rapport à $y$, $d_2f(a,b)$ soit un isomorphisme de $F$ dans $G$. Alors il existe un voisinage ouvert $U_{a,b}$ de $(a,b)$ dans $U$, un voisinnage ouvert $W_a$ de $a$ dans $E$ et une fonction $\varphi :W_a \longrightarrow F$ de classe $C^1$ telle que $(x,y) \in U_{(a,b)}$ et $f(x,y)=0_G \Leftrightarrow y = \varphi (x)$.\\
+\underline{De plus:} $$d\varphi(x) . h = -(d_2f(a,b))^{-1} . d_1f(x, \varphi (x) ) . h, \forall x \in W_a \text{ et } \forall \in E$$
+\end{thm}
+
+\textbf{(Cours 12)}\\~\\
+
+
+(voir exemple page 1 - cours 12)
+
 %\begin{} \end{}
 
 
 
 
-%Rendu ici
+%Rendu 
 
 
 
 
 
-
+%f: U \subset E \longrightarrow F
 
 
 
