@@ -562,29 +562,48 @@ Soit $E$ un \evn . Alors l'application ... dur a écrire voir coro 4.7 page 3 co
 \begin{mydef}
 Soit $E$ un \evn . 
 \begin{enumerate}
-\item Un hyperplan de E est un ensemble de la forme: $$ H = \{ x \in E | f(x) = \alpha \}$$ où $f \in E^*$ non nulle et $\alpha \in \mathbb{R}$ ($f$ n'est pas nécessairement continue). On dit que $H$ est d'équation $f(x) = \alpha$.
-\item L'hyperplan $H$ est fermé \ssi $f$ est continue.
-\item Une partie $C \subset E$ est dite convexe \ssi $\forall x, y \in C$ et $\forall \lambda , \mu \in \mathbb{R}$ ($\lambda + \mu = 1$), on a $\lambda x + \mu y \in C$ avec (pas sure du reste)
+\item Un \underline{hyperplan} de E est un ensemble de la forme: $$ H = \{ x \in E | f(x) = \alpha \}$$ où $f \in E^*$ non nulle et $\alpha \in \mathbb{R}$ ($f$ n'est pas nécessairement continue). On dit que $H$ est d'équation $f(x) = \alpha$.
+\item L'hyperplan $H$ est \underline{fermé} \ssi $f$ est continue.
+\item Une partie $C \subset E$ est dite \underline{convexe} \ssi $\forall x, y \in C$ et $\forall \lambda , \mu \in \mathbb{R}$ ($\lambda + \mu = 1$), on a $\lambda x + \mu y \in C$ avec $\lambda + \mu = 1$ où $\lambda \geq 1$ et $\mu \geq 0$.
+
+
+\item Soit $A$ et $B$ deux parties de $E$. On dit que l'hyperplan $H = \{ f = \alpha \}$ sépare $A$ et $B$ au sens large si on a $ A  \subset \{ x \in E | f(x) \leq \alpha \}$ et $B \subset \{ x \in E | f(x) \geq \alpha \}$
+
+\item On dit que $H = \{ f = \alpha \}$ sépare $A$ et $B$ au sens strict si on a qu'il $\exists \epsilon >0$ tel que $ A \subset \{ x \in E | f(x) \leq \alpha - \epsilon \}$ et $B \subset \{ x \in E | f(x) \geq \alpha + \epsilon \}$
 \end{enumerate}
 \end{mydef}
 
 
+\underline{Hahn-Banach, première forme géométrique}
+
+
+
+\begin{thm}
+Soit $E$ un espace vectoriel normal et $A$ et $B$ deux parties convexes, non vides et disjointes. Si $A$ est un ouvert, alors il existe un hyperplan fermé qui sépare $A$ et $B$ au sens large.
+\end{thm}
+
+\underline{Hahn-Banach, deuxième forme géométrique}
+\begin{thm}
+Soit $E$ un espace vectoriel normé et $A$ et $B$ deux parties convexes non vides et disjointes. Si $A$ est fermé et $B$ compact, alors il existe un hyperplan fermé qui sépare $A$ et $B$ au sens \underline{stricte}
+\end{thm}
+
+\begin{cor}
+Soit $\qquad F \nsubseteq E$ un sous-espace vectoriel fermé de $E$ ($F \neq E$). Alors il existe une forme $f \in E^\prime$ non nulle telle que $f_{|_F} = 0$ (c'est-à-dire $f(x) = 0, \forall x \in F$)
+\end{cor}
+
+\textbf{\underline{Chapitre 3 - Calcul différentiel dans les espaces de Banach}}\\~\\
 
 
 
 
 
 
+%\begin{} \end{}
 
 
 
 
-
-
-
-
-
-
+%Rendu ici
 
 
 
