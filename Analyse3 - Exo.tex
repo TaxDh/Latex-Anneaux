@@ -31,6 +31,14 @@
 \newcommand{\evn}{espace vectoriel normé }
 \newcommand{\ssi}{\textit{si et seulement si} }
 \newcommand{\edm}{\textit{$(E,d)$} }
+\newcommand{\fdm}{\textit{$(F,d_F)$} }
+\newcommand{\nrm}{\lVert . \rVert }
+\newcommand{\vertiii}[1]{{\left\vert\kern-0.25ex\left\vert\kern-0.25ex\left\vert #1 
+    \right\vert\kern-0.25ex\right\vert\kern-0.25ex\right\vert}}
+\newcommand{\fef}{\textit{$f:E \longrightarrow F$} }
+\newcommand{\fuf}{\textit{$f:U \longrightarrow F$} }
+
+
 
 
 \newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
@@ -124,7 +132,16 @@ sphere unite fermée compacte => E de dimension finie ( th de Riesz)
 Une suite de Cauchy est convergente \ssi elle a une valeur d'adhérence.
 \end{cor}
 
-
+\begin{thm}
+Soit $f:E \longrightarrow F$ une application linéaire de l'espace vectoriel normé $(E, \nrm_E)$ dans l'espace vectoriel normé $(F, \nrm_F)$. Les propriétés suivantes sont équivalentes:
+\begin{enumerate}
+\item L'application linéaire $f$ est continue sur $E$;
+\item $f$ est continue en 0;
+\item $f$ est uniformément continue sur $E$;
+\item $f$ est lipschitzienne;
+\item Il existe une constante $k > 0$, telle que $\lVert f(x) \rVert_F \leq k \lVert x \rVert_E$, $\forall x \in E$.
+\end{enumerate}
+\end{thm}
 
 
 \end{flushleft}
