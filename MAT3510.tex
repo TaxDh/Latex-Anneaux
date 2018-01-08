@@ -1,0 +1,115 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{amssymb}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}[section]
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}%pour le double fleche de la conv uniforme
+\begin{document}
+
+%nouvelle commande
+
+\newcommand{\znz}{\mathbb{Z} / n \mathbb{Z} }
+\newcommand{\zmz}{\mathbb{Z} / m \mathbb{Z} }
+\newcommand{\zpz}{\mathbb{Z} / p \mathbb{Z} }
+\newcommand{\dbs}{\\~\\}
+\newcommand{\zdex}{\mathbb{Z} [x]}
+\newcommand{\qdex}{\mathbb{Q} [x]}
+\newcommand{\rdex}{\mathbb{R} [x]}
+\newcommand{\zdei}{\mathbb{Z} [i]}
+\newcommand{\Fp}{\mathbb{F}_p}
+\newcommand{\Fpn}{\mathbb{F}_{p^n}}
+\newcommand{\Fq}{\mathbb{F}_q}
+\newcommand{\Fpdex}{\mathbb{F}_p [x]}
+\newcommand{\Fqdex}{\mathbb{F}_q [x]}
+\newcommand{\evn}{espace vectoriel normé }
+\newcommand{\ssi}{\textit{si et seulement si} }
+\newcommand{\edm}{\textit{$(E,d)$} }
+\newcommand{\fdm}{\textit{$(F,d_F)$} }
+\newcommand{\nrm}{\lVert . \rVert }
+\newcommand{\vertiii}[1]{{\left\vert\kern-0.25ex\left\vert\kern-0.25ex\left\vert #1 
+    \right\vert\kern-0.25ex\right\vert\kern-0.25ex\right\vert}}
+\newcommand{\fef}{\textit{$f:E \longrightarrow F$} }
+\newcommand{\fER}{\textit{$f:E \longrightarrow R$} }
+
+
+
+
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\newtheorem{mydef}{Définition}
+\newtheorem{thm}{Théorème}
+\newtheorem{prop}{Proposition}
+\newtheorem{cor}{Corollaire}
+\newtheorem{lem}{Lemme}
+\newtheorem{rap}{Rappel}
+\newtheorem{rem}{Remarque}
+\newtheorem{propriete}{Propriétés}
+
+%debut du texte
+\begin{flushleft}
+
+\underline{\textbf{MAT3510}}
+\\~\\
+\underline{Semaine 1}
+\\~\\
+
+\begin{rap}
+\underline{Sur la convergence uniforme.}
+\end{rap}
+
+\begin{mydef}
+Soit $E \subset \mathbb{R}^n$. On dit qu'une suite de fonction $f_n : E \longrightarrow \mathbb{R}$ \underline{converge uniformémrent} vers \fER si $$ \forall \epsilon > 0 , \exists N \in \mathbb{N} \text{ tel que } n>N \Rightarrow |f_n(x) - f(x)| < \epsilon , \forall x \in E$$  Dans ce cas, on écrit que $f_n \rightrightarrows f$.
+\end{mydef}
+
+\begin{thm}
+Si $\{f_n \}$ est une suite de fonction intégrables (au sens de Riemann) sur $ [a,b] \subset \mathbb{R}$ telle que $f_n \rightrightarrows f$, alors $$F_n(x) := \int_a^x f_n(t) dt \rightrightarrows F(x) = \int_a^x f(t) dt$$
+\end{thm}
+
+\begin{thm}
+Si $\{ f_n \}$ est une suite de fonctions sur continue sur $E \subset \mathbb{R}^n$ tel que $f_n \rightrightarrows f$, alors $f$ est une fonction continue.
+\end{thm}
+
+\underline{\textbf{Avertissement :}} Si $f_n \rightrightarrows f$ et $f_n$ est différentiable $\forall n$, alors on n'a pas nécessairement $f'_n \rightarrow f'$
+
+\begin{thm}
+Si $\{ f_n \}$ est une suite de fontion sur $[a,b] \subset \mathbb{R}$ tel que $\{ f_n \}$ converge ponctuellement vers $f$. Supposons que les $f_n$ sont différentiables et que $f'_n$ est intégrable au sens de Riemann avec $f'_n \rightrightarrows g$. Alors $f$ est différentiable avec $f' \rightrightarrows g$ et $f_n \rightrightarrows f$.
+\end{thm}
+
+\begin{mydef}
+Une fonction \fER (où $E \subset \mathbb{R}$) est uniformément continue si $\forall \epsilon > 0 $, $\exists \delta >0 $ tel que $\forall x, y \in E$, $|x-y| < \delta \Rightarrow | f(x) - f(y) | < \epsilon $.
+\end{mydef}
+
+\begin{thm}
+Si $K \subset \mathbb{R}^n$ est un compact et $f : \mathbb{K} \longrightarrow \mathbb{R}$ est une fontion continue, alors $f$ est continue.
+\end{thm}
+
+\begin{mydef}
+On dénote par $C'(E)$ l'ensemble des fontions \fER avec $E \subset \mathbb{R}^n$ tel que $f$ est continue et $\dfrac{\partial f}{\partial x_i}$ existe et est continue sur $E$ pour $i= 1, \ldots , n$. où $x_1, \ldots , x_n$ sont les coordonnées canoniques sur $\mathbb{R}^n$
+\end{mydef}
+
+\begin{thm}
+Si $f \in C'([a,b]_x \times [c,d]_t)$, alors la fonction $t \mapsto \int_a^b f(x,t) dx$ est différentiable avec $\frac{\partial}{\partial t} \int_a^b f(x,t) dx = \int_a^b \frac{\partial f (x,t)}{\partial t} dx$
+ \end{thm}
+
+%Rendu verso page 2
+
+\end{flushleft}
+\end{document}
+
+%\\~\\ pour un double enter
+%\begin{} \end{}
+%... = 	\ldots
+% plus grand ou égale = \geq
+% somme produit \prod_{i = 1}^{k} (1-\frac{1}{p_i})
+% congrus \equiv et modulo \bmod
+% barre au dessus \overline{ }.
+% isomorphe = \simeq
+
+%$\lVert x \rVert$ = les barre de norme
